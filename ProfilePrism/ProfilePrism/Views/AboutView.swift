@@ -28,7 +28,7 @@ struct AboutView: View {
                     .foregroundStyle(.secondary)
             }
 
-            Text("Automatically routes URLs to the right\nChrome profile based on domain rules.")
+            Text("Stop juggling Chrome profiles.\nLet your links find their way home.")
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
