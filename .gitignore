@@ -12,6 +12,9 @@ xcuserdata/
 
 # Build artifacts
 *.app
+*.dmg
+*.zip
+.releases/
 ProfileRouter/ProfileRouter\ */
 
 # sources
