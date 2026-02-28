@@ -52,7 +52,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             let image = NSImage(named: "MenuBarIcon")
             image?.isTemplate = true
             button.image = image
-            button.image?.accessibilityDescription = "Profile Router"
+            button.image?.accessibilityDescription = "ProfilePrism"
         }
 
         let menu = NSMenu()

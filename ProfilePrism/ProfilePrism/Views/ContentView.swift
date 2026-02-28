@@ -21,7 +21,7 @@ struct ContentView: View {
     private var header: some View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
-                Text("Profile Router")
+                Text("ProfilePrism")
                     .font(.title3.bold())
                 Text("Rules are matched in order from top. The first match is used.")
                     .font(.caption)
