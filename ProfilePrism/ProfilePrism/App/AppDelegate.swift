@@ -4,16 +4,8 @@ import SwiftUI
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
 
-    private var statusItem: NSStatusItem!
     private var onboardingWindow: NSWindow?
     private var pickerWindow: NSWindow?
-    private var helpWindow: NSWindow?
-    #if DEBUG
-    private var debugWindow: NSWindow?
-    #endif
-
-    /// Dedup: last handled URL
-    private var lastHandled: (url: String, time: Date)?
 
     // MARK: - Lifecycle
 
@@ -27,65 +19,29 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        setupStatusItem()
-
-        // Menu bar app — close settings window on launch
-        DispatchQueue.main.async {
-            for window in NSApp.windows where window.identifier?.rawValue == "settings" {
-                window.close()
-            }
-        }
-
         // First-run onboarding
         if !UserDefaults.standard.bool(forKey: "didShowWelcome") {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.showOnboarding()
             }
         }
+
+        // Observe URLRouter for picker requests
+        observePickerRequests()
     }
 
-    // MARK: - Status Bar
+    // MARK: - URL Handling
 
-    private func setupStatusItem() {
-        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        if let button = statusItem.button {
-            let image = NSImage(named: "MenuBarIcon")
-            image?.isTemplate = true
-            button.image = image
-            button.image?.accessibilityDescription = "ProfilePrism"
-        }
+    @objc private func handleURLEvent(
+        _ event: NSAppleEventDescriptor,
+        replyEvent: NSAppleEventDescriptor
+    ) {
+        guard
+            let urlString = event.paramDescriptor(forKeyword: keyDirectObject)?.stringValue,
+            let url = URL(string: urlString)
+        else { return }
 
-        let menu = NSMenu()
-        menu.addItem(NSMenuItem(
-            title: String(localized: "Open Settings"),
-            action: #selector(openSettings),
-            keyEquivalent: ","
-        ))
-        menu.addItem(NSMenuItem(
-            title: String(localized: "Help"),
-            action: #selector(openHelp),
-            keyEquivalent: "?"
-        ))
-        menu.addItem(NSMenuItem(
-            title: String(localized: "Check for Updates"),
-            action: #selector(checkForUpdates),
-            keyEquivalent: ""
-        ))
-        #if DEBUG
-        menu.addItem(.separator())
-        menu.addItem(NSMenuItem(
-            title: String(localized: "URL Test"),
-            action: #selector(openDebug),
-            keyEquivalent: "d"
-        ))
-        #endif
-        menu.addItem(.separator())
-        menu.addItem(NSMenuItem(
-            title: String(localized: "Quit"),
-            action: #selector(NSApplication.terminate(_:)),
-            keyEquivalent: "q"
-        ))
-        statusItem.menu = menu
+        URLRouter.shared.routeURL(url)
     }
 
     // MARK: - Onboarding
@@ -93,8 +49,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func showOnboarding() {
         let onboarding = OnboardingView(onComplete: { [weak self] in
             UserDefaults.standard.set(true, forKey: "didShowWelcome")
-            self?.onboardingWindow?.close()
-            self?.onboardingWindow = nil
+            DispatchQueue.main.async {
+                self?.onboardingWindow?.close()
+                self?.onboardingWindow = nil
+            }
         })
 
         let window = NSWindow(
@@ -103,6 +61,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered,
             defer: false
         )
+        window.isReleasedWhenClosed = false
         window.title = String(localized: "Get Started with ProfilePrism")
         window.contentView = NSHostingView(rootView: onboarding)
         window.center()
@@ -121,52 +80,24 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         onboardingWindow = window
     }
 
-    // MARK: - Open Settings
+    // MARK: - Profile Picker (NSPanel — floating, no SwiftUI equivalent)
 
-    @objc private func openSettings() {
-        for window in NSApp.windows where window.identifier?.rawValue == "settings" {
-            window.makeKeyAndOrderFront(nil)
-            NSApp.activate()
-            return
+    private func observePickerRequests() {
+        withObservationTracking {
+            _ = URLRouter.shared.pendingPickerURL
+        } onChange: { [weak self] in
+            DispatchQueue.main.async {
+                self?.handlePickerRequest()
+                self?.observePickerRequests()
+            }
         }
     }
 
-    // MARK: - URL Handling
-
-    func routeURL(_ url: URL) {
-        let now = Date()
-        if let last = lastHandled,
-           last.url == url.absoluteString,
-           now.timeIntervalSince(last.time) < 0.5 {
-            return
-        }
-        lastHandled = (url.absoluteString, now)
-
-        // profilerouter://route?url=<encoded_url>
-        let targetURL: URL
-        if url.scheme == "profilerouter",
-           let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
-           let encoded = components.queryItems?.first(where: { $0.name == "url" })?.value,
-           let decoded = URL(string: encoded) {
-            targetURL = decoded
-        } else {
-            targetURL = url
-        }
-
-        let config = ConfigManager.shared
-        let result = Router.resolve(url: targetURL, rules: config.rules)
-
-        switch result {
-        case .open(let profile):
-            Router.openInChrome(url: targetURL, profile: profile)
-        case .ask:
-            showProfilePicker(for: targetURL)
-        case .none:
-            Router.openInChrome(url: targetURL, profile: nil)
-        }
+    private func handlePickerRequest() {
+        guard let url = URLRouter.shared.pendingPickerURL else { return }
+        URLRouter.shared.pendingPickerURL = nil
+        showProfilePicker(for: url)
     }
-
-    // MARK: - Profile Picker
 
     private func showProfilePicker(for url: URL) {
         pickerWindow?.close()
@@ -180,7 +111,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let picker = ProfilePickerView(
             url: url,
             profiles: profiles,
-            onSelect: { [weak self] profile in
+            onSelect: { [weak self] profile, shouldRemember in
+                if shouldRemember {
+                    RememberedRouteManager.shared.remember(url: url, profile: profile)
+                }
                 Router.openInChrome(url: url, profile: profile)
                 self?.pickerWindow?.close()
                 self?.pickerWindow = nil
@@ -207,104 +141,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         pickerWindow = window
     }
-
-    @objc private func handleURLEvent(
-        _ event: NSAppleEventDescriptor,
-        replyEvent: NSAppleEventDescriptor
-    ) {
-        guard
-            let urlString = event.paramDescriptor(forKeyword: keyDirectObject)?.stringValue,
-            let url = URL(string: urlString)
-        else { return }
-
-        routeURL(url)
-    }
-
-    // MARK: - Help
-
-    @objc private func openHelp() {
-        if let w = helpWindow {
-            w.makeKeyAndOrderFront(nil)
-            NSApp.activate()
-            return
-        }
-        let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 520, height: 500),
-            styleMask: [.titled, .closable, .resizable],
-            backing: .buffered, defer: false
-        )
-        window.title = String(localized: "ProfilePrism Help")
-        window.contentView = NSHostingView(rootView: HelpView())
-        window.center()
-        window.makeKeyAndOrderFront(nil)
-        NSApp.activate()
-        helpWindow = window
-    }
-
-    // MARK: - Updates
-
-    @objc private func checkForUpdates() {
-        Task { @MainActor in
-            let result = await UpdateChecker.check()
-            switch result {
-            case .upToDate:
-                let alert = NSAlert()
-                alert.messageText = String(localized: "You're up to date")
-                alert.informativeText = String(localized: "You're running the latest version.")
-                alert.alertStyle = .informational
-                alert.addButton(withTitle: String(localized: "OK"))
-                alert.runModal()
-            case .updateAvailable(let release):
-                let alert = NSAlert()
-                alert.messageText = String(localized: "Update Available")
-                let version = release.tagName.replacingOccurrences(of: "v", with: "")
-                alert.informativeText = String(localized: "ProfilePrism \(version) is available for download.\n\n\(release.body)")
-                alert.alertStyle = .informational
-                alert.addButton(withTitle: String(localized: "Download"))
-                alert.addButton(withTitle: String(localized: "Later"))
-                if alert.runModal() == .alertFirstButtonReturn {
-                    if let url = UpdateChecker.dmgDownloadURL(from: release) {
-                        NSWorkspace.shared.open(url)
-                    }
-                }
-            case .error(let message):
-                let alert = NSAlert()
-                alert.messageText = String(localized: "Update Check Failed")
-                alert.informativeText = message
-                alert.alertStyle = .warning
-                alert.addButton(withTitle: String(localized: "OK"))
-                alert.runModal()
-            }
-        }
-    }
-
-    // MARK: - Debug
-
-    #if DEBUG
-    @objc private func openDebug() {
-        if let w = debugWindow {
-            w.makeKeyAndOrderFront(nil)
-            NSApp.activate()
-            return
-        }
-
-        let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 420, height: 260),
-            styleMask: [.titled, .closable, .resizable],
-            backing: .buffered,
-            defer: false
-        )
-        window.title = String(localized: "URL Test")
-        window.contentView = NSHostingView(
-            rootView: DebugView()
-                .environmentObject(ConfigManager.shared)
-        )
-        window.center()
-        window.makeKeyAndOrderFront(nil)
-        NSApp.activate()
-        debugWindow = window
-    }
-    #endif
 
     // MARK: - Window Management
 

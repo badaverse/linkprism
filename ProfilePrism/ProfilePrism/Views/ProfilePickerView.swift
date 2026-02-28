@@ -3,8 +3,10 @@ import SwiftUI
 struct ProfilePickerView: View {
     let url: URL
     let profiles: [ChromeProfile]
-    let onSelect: (String) -> Void
+    let onSelect: (String, Bool) -> Void
     let onCancel: () -> Void
+
+    @State private var rememberChoice = true
 
     var body: some View {
         VStack(spacing: 0) {
@@ -26,7 +28,7 @@ struct ProfilePickerView: View {
             ScrollView {
                 VStack(spacing: 2) {
                     ForEach(profiles) { profile in
-                        Button(action: { onSelect(profile.directory) }) {
+                        Button(action: { onSelect(profile.directory, rememberChoice) }) {
                             HStack(spacing: 10) {
                                 Image(systemName: "person.circle.fill")
                                     .font(.title3)
@@ -72,6 +74,9 @@ struct ProfilePickerView: View {
             Divider()
 
             HStack {
+                Toggle("Remember this URL", isOn: $rememberChoice)
+                    .toggleStyle(.checkbox)
+                    .font(.caption)
                 Spacer()
                 Button("Cancel") { onCancel() }
                     .keyboardShortcut(.escape, modifiers: [])
@@ -79,6 +84,6 @@ struct ProfilePickerView: View {
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
         }
-        .frame(width: 300, height: min(CGFloat(profiles.count) * 52 + 120, 380))
+        .frame(width: 300, height: min(CGFloat(profiles.count) * 52 + 140, 400))
     }
 }
