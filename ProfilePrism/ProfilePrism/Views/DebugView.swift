@@ -41,7 +41,7 @@ struct DebugView: View {
                     Spacer()
                     Button("Open in Browser") {
                         guard let url = URL(string: urlString) else { return }
-                        (NSApp.delegate as? AppDelegate)?.routeURL(url)
+                        URLRouter.shared.routeURL(url)
                     }
                     .buttonStyle(.borderedProminent)
                 }
