@@ -1,4 +1,4 @@
-# Releasing ProfilePrism
+# Releasing LinkPrism
 
 ## Prerequisites
 
@@ -18,10 +18,10 @@ Both Debug and Release configurations should match.
 
 ## 2. Build the App
 
-1. Open `ProfilePrism/ProfilePrism.xcodeproj` in Xcode
+1. Open `LinkPrism/LinkPrism.xcodeproj` in Xcode
 2. Select **Product → Archive**
 3. In the Organizer, click **Distribute App → Copy App**
-4. Save `ProfilePrism.app` to a staging folder (e.g. `.releases/`)
+4. Save `LinkPrism.app` to a staging folder (e.g. `.releases/`)
 
 ## 3. Create DMG
 
@@ -29,16 +29,16 @@ Both Debug and Release configurations should match.
 cd .releases
 
 create-dmg \
-  --volname "ProfilePrism" \
+  --volname "LinkPrism" \
   --background ../assets/dmg-background.png \
   --window-pos 200 120 \
   --window-size 660 400 \
   --icon-size 100 \
-  --icon "ProfilePrism.app" 170 200 \
+  --icon "LinkPrism.app" 170 200 \
   --app-drop-link 490 200 \
   --no-internet-enable \
-  ProfilePrism.dmg \
-  ProfilePrism.app
+  LinkPrism.dmg \
+  LinkPrism.app
 ```
 
 Open the DMG to verify the layout (app icon + arrow + Applications folder).
@@ -46,19 +46,19 @@ Open the DMG to verify the layout (app icon + arrow + Applications folder).
 ## 4. Package Chrome Extension
 
 ```bash
-cd ProfilePrismExtension
-zip -r ../.releases/ProfilePrismExtension.zip . -x '*.DS_Store'
+cd LinkPrismExtension
+zip -r ../.releases/LinkPrismExtension.zip . -x '*.DS_Store'
 ```
 
 ## 5. Create GitHub Release
 
 ```bash
 gh release create v<VERSION> \
-  .releases/ProfilePrism.dmg \
-  .releases/ProfilePrismExtension.zip \
-  --title "ProfilePrism v<VERSION>" \
+  .releases/LinkPrism.dmg \
+  .releases/LinkPrismExtension.zip \
+  --title "LinkPrism v<VERSION>" \
   --notes "$(cat <<'EOF'
-## ProfilePrism v<VERSION>
+## LinkPrism v<VERSION>
 
 ### Highlights
 - ...

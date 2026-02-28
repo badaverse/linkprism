@@ -1,0 +1,1311 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "\"Ask\" mode to choose profile each time" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"물어보기\" 모드로 매번 프로필 선택 가능"
+          }
+        }
+      }
+    },
+    "*.atlassian.net" : {
+
+    },
+    "%lld" : {
+
+    },
+    "1. Open chrome://extensions in Chrome." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. Chrome에서 chrome://extensions 페이지를 엽니다."
+          }
+        }
+      }
+    },
+    "2. Enable \"Developer mode\"." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. \"개발자 모드\"를 활성화합니다."
+          }
+        }
+      }
+    },
+    "3. Click \"Load unpacked\"." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. \"압축해제된 확장 프로그램을 로드합니다\" 버튼을 클릭합니다."
+          }
+        }
+      }
+    },
+    "4. Select the LinkPrism extension folder." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. LinkPrism 확장 프로그램 폴더를 선택합니다."
+          }
+        }
+      }
+    },
+    "A macOS menu bar app that automatically\nroutes URLs to the right Chrome profile." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL을 자동으로 올바른 Chrome 프로필로\n라우팅하는 macOS 메뉴바 앱입니다."
+          }
+        }
+      }
+    },
+    "About" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정보"
+          }
+        }
+      }
+    },
+    "Add Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 추가"
+          }
+        }
+      }
+    },
+    "Ask" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물어보기"
+          }
+        }
+      }
+    },
+    "Ask Feature" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물어보기 기능"
+          }
+        }
+      }
+    },
+    "Ask which profile every time" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "열 때마다 프로필 물어보기"
+          }
+        }
+      }
+    },
+    "atlassian.net" : {
+
+    },
+    "Auto-select Chrome profile by domain" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도메인별 Chrome 프로필 자동 선택"
+          }
+        }
+      }
+    },
+    "Automatically routes URLs to the right\nChrome profile based on domain rules." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도메인 규칙에 따라 URL을 올바른\nChrome 프로필로 자동 라우팅합니다."
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소"
+          }
+        }
+      }
+    },
+    "Check for Updates" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트 확인"
+          }
+        }
+      }
+    },
+    "Chrome Extension" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 확장 프로그램"
+          }
+        }
+      }
+    },
+    "Chrome handles link clicks internally, so macOS default browser settings alone cannot redirect links clicked within Chrome to LinkPrism." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome은 내부적으로 링크 클릭을 직접 처리하기 때문에, macOS 기본 브라우저 설정만으로는 Chrome 내부에서 클릭한 링크를 LinkPrism으로 전달할 수 없습니다."
+          }
+        }
+      }
+    },
+    "Chrome Profile Directory" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 프로필 디렉토리"
+          }
+        }
+      }
+    },
+    "Clear All" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체 삭제"
+          }
+        }
+      }
+    },
+    "Click \"Load unpacked\"" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"압축해제된 확장 프로그램을 로드합니다\" 클릭"
+          }
+        }
+      }
+    },
+    "Click \"Load unpacked\" and select the unzipped folder" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"압축해제된 확장 프로그램을 로드합니다\"를 클릭하고 압축 해제한 폴더를 선택"
+          }
+        }
+      }
+    },
+    "Default Chrome (No Match)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본 Chrome (매칭 없음)"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제"
+          }
+        }
+      }
+    },
+    "Delete Selected" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택 항목 삭제"
+          }
+        }
+      }
+    },
+    "Delete Selected Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택한 규칙 삭제"
+          }
+        }
+      }
+    },
+    "Directory: %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "폴더명 기준: %@"
+          }
+        }
+      }
+    },
+    "Don't ask again for this URL" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 URL은 다음부터 묻지 않기"
+          }
+        }
+      }
+    },
+    "Download" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다운로드"
+          }
+        }
+      }
+    },
+    "Download the extension zip from GitHub Releases" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub Releases에서 확장 프로그램 zip 다운로드"
+          }
+        }
+      }
+    },
+    "e.g. .*\\.corp\\.com" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예: .*\\.corp\\.com"
+          }
+        }
+      }
+    },
+    "e.g. notion.so or *.atlassian.net" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예: notion.so 또는 *.atlassian.net"
+          }
+        }
+      }
+    },
+    "e.g. Profile 2 or Default" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예: Profile 2 또는 Default"
+          }
+        }
+      }
+    },
+    "Edit" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "편집"
+          }
+        }
+      }
+    },
+    "Edit Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 편집"
+          }
+        }
+      }
+    },
+    "Edit Selected Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택한 규칙 편집"
+          }
+        }
+      }
+    },
+    "Enable \"Developer mode\"" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"개발자 모드\" 활성화"
+          }
+        }
+      }
+    },
+    "Enable Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 활성화"
+          }
+        }
+      }
+    },
+    "Enabled" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "활성화"
+          }
+        }
+      }
+    },
+    "Enter URL" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL 입력"
+          }
+        }
+      }
+    },
+    "Exact Match" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정확한 매칭"
+          }
+        }
+      }
+    },
+    "Example:" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예시:"
+          }
+        }
+      }
+    },
+    "Export Failed" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내보내기 실패"
+          }
+        }
+      }
+    },
+    "Export Rules" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 내보내기"
+          }
+        }
+      }
+    },
+    "Export Rules…" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 내보내기…"
+          }
+        }
+      }
+    },
+    "Get Started" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시작하기"
+          }
+        }
+      }
+    },
+    "Get Started with LinkPrism" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism 시작하기"
+          }
+        }
+      }
+    },
+    "GitHub" : {
+
+    },
+    "github\\.com/my-org/.*" : {
+
+    },
+    "Help" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도움말"
+          }
+        }
+      }
+    },
+    "Host" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트"
+          }
+        }
+      }
+    },
+    "Host Pattern Matching" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트 패턴 매칭"
+          }
+        }
+      }
+    },
+    "Host, wildcard, and regex pattern support" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트, 와일드카드, 정규식 패턴 지원"
+          }
+        }
+      }
+    },
+    "Import" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가져오기"
+          }
+        }
+      }
+    },
+    "Import Failed" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가져오기 실패"
+          }
+        }
+      }
+    },
+    "Import Rules" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 가져오기"
+          }
+        }
+      }
+    },
+    "Import Rules?" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙을 가져오시겠습니까?"
+          }
+        }
+      }
+    },
+    "Import Rules…" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 가져오기…"
+          }
+        }
+      }
+    },
+    "Installation" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설치 방법"
+          }
+        }
+      }
+    },
+    "Invalid regex: %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유효하지 않은 정규식: %@"
+          }
+        }
+      }
+    },
+    "Invalid URL" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잘못된 URL"
+          }
+        }
+      }
+    },
+    "Later" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나중에"
+          }
+        }
+      }
+    },
+    "Links clicked inside Chrome bypass the default\nbrowser, so LinkPrism can't intercept them.\nInstall the extension to solve this." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 내부에서 클릭한 링크는 기본 브라우저를\n거치지 않아 LinkPrism이 개입할 수 없습니다.\n확장 프로그램을 설치하면 이 문제를 해결할 수 있습니다."
+          }
+        }
+      }
+    },
+    "Made by badaverse" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Made by badaverse"
+          }
+        }
+      }
+    },
+    "Matched Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "매칭 규칙"
+          }
+        }
+      }
+    },
+    "Matches when the hostname is an exact match." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트명이 정확히 일치할 때 매칭됩니다."
+          }
+        }
+      }
+    },
+    "MIT License" : {
+
+    },
+    "Network error: %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네트워크 오류: %@"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음"
+          }
+        }
+      }
+    },
+    "No remembered URLs for this rule." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 규칙에 기억된 URL이 없습니다."
+          }
+        }
+      }
+    },
+    "No remembered URLs yet." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기억된 URL이 없습니다."
+          }
+        }
+      }
+    },
+    "None" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "없음"
+          }
+        }
+      }
+    },
+    "Not selected" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택 안 됨"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인"
+          }
+        }
+      }
+    },
+    "Open chrome://extensions and enable \"Developer mode\"" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "chrome://extensions를 열고 \"개발자 모드\" 활성화"
+          }
+        }
+      }
+    },
+    "Open chrome://extensions in Chrome" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome에서 chrome://extensions 열기"
+          }
+        }
+      }
+    },
+    "Open in Browser" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "실제로 열기"
+          }
+        }
+      }
+    },
+    "Open in Profile" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필로 열기"
+          }
+        }
+      }
+    },
+    "Open Settings" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정 열기"
+          }
+        }
+      }
+    },
+    "Open System Settings" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시스템 설정 열기"
+          }
+        }
+      }
+    },
+    "Previous" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이전"
+          }
+        }
+      }
+    },
+    "Profile" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필"
+          }
+        }
+      }
+    },
+    "LinkPrism" : {
+
+    },
+    "LinkPrism %@ is available for download.\n\n%@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism %@ 버전을 다운로드할 수 있습니다.\n\n%@"
+          }
+        }
+      }
+    },
+    "LinkPrism Help" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism 도움말"
+          }
+        }
+      }
+    },
+    "LinkPrism is\nrunning in the menu bar" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism가\n메뉴바에서 실행 중입니다"
+          }
+        }
+      }
+    },
+    "LinkPrism needs to be set as the\ndefault web browser to receive URLs." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism이 URL을 받으려면\n기본 웹 브라우저로 설정해야 합니다."
+          }
+        }
+      }
+    },
+    "LinkPrism Settings" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism 설정"
+          }
+        }
+      }
+    },
+    "linkprism://route?url=<encoded_url>" : {
+
+    },
+    "Quit" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "종료"
+          }
+        }
+      }
+    },
+    "Regex" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정규식"
+          }
+        }
+      }
+    },
+    "Regex Pattern" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정규식 패턴"
+          }
+        }
+      }
+    },
+    "Remembered" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기억된 URL"
+          }
+        }
+      }
+    },
+    "Remembered URLs" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기억된 URL"
+          }
+        }
+      }
+    },
+    "Result" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결과"
+          }
+        }
+      }
+    },
+    "Routing" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라우팅"
+          }
+        }
+      }
+    },
+    "Routing Rules" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라우팅 규칙"
+          }
+        }
+      }
+    },
+    "Rules" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙"
+          }
+        }
+      }
+    },
+    "Rules are evaluated from top to bottom. The first matching rule is applied." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙은 위에서 아래로 순서대로 평가되며, 첫 번째로 일치하는 규칙이 적용됩니다."
+          }
+        }
+      }
+    },
+    "Rules are matched in order from top. The first match is used." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위에서부터 순서대로 매칭되며, 첫 번째 일치 규칙이 사용됩니다."
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장"
+          }
+        }
+      }
+    },
+    "Select Profile" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필 선택"
+          }
+        }
+      }
+    },
+    "Select the LinkPrismExtension folder" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrismExtension 폴더 선택"
+          }
+        }
+      }
+    },
+    "Server response error" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "서버 응답 오류"
+          }
+        }
+      }
+    },
+    "Set as Default Browser" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본 브라우저로 설정"
+          }
+        }
+      }
+    },
+    "Stop juggling Chrome profiles.\nLet your links find their way home." : {
+      "comment" : "App tagline in About view",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 프로필 사이에서 헤매지 마세요.\n링크가 알아서 제자리를 찾아갑니다."
+          }
+        }
+      }
+    },
+    "Supports regex patterns using NSRegularExpression. Regex is matched against the full URL." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NSRegularExpression을 사용한 정규식 패턴을 지원합니다. 정규식은 전체 URL에 대해 매칭됩니다."
+          }
+        }
+      }
+    },
+    "System Settings → Desktop & Dock → Default web browser\nSelect \"LinkPrism\"." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시스템 설정 → 데스크탑 및 Dock → 기본 웹 브라우저\n에서 \"LinkPrism\"을 선택하세요."
+          }
+        }
+      }
+    },
+    "Test" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "테스트"
+          }
+        }
+      }
+    },
+    "The Chrome extension intercepts links clicked within Chrome and forwards them to LinkPrism via the linkprism:// scheme." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 확장 프로그램은 Chrome 내부에서 클릭한 링크를 가로채어 linkprism:// 스킴을 통해 LinkPrism으로 전달합니다."
+          }
+        }
+      }
+    },
+    "The file could not be read. It may be corrupted or in an unsupported format." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파일을 읽을 수 없습니다. 파일이 손상되었거나 지원하지 않는 형식일 수 있습니다."
+          }
+        }
+      }
+    },
+    "This is useful for domains used in multiple contexts (e.g., GitHub, Google Docs). You can choose which profile to use each time." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여러 컨텍스트에서 사용하는 도메인(예: GitHub, Google Docs 등)에 유용합니다. 매번 어떤 프로필로 열지 직접 선택할 수 있습니다."
+          }
+        }
+      }
+    },
+    "This pattern matches all repositories under the my-org organization on GitHub." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 패턴은 GitHub의 my-org 조직 아래 모든 저장소에 매칭됩니다."
+          }
+        }
+      }
+    },
+    "This pattern matches all subdomains such as jira.atlassian.net, confluence.atlassian.net, etc." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 패턴은 jira.atlassian.net, confluence.atlassian.net 등 모든 서브도메인에 매칭됩니다."
+          }
+        }
+      }
+    },
+    "Update Available" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새 버전이 있습니다"
+          }
+        }
+      }
+    },
+    "Update Check Failed" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트 확인 실패"
+          }
+        }
+      }
+    },
+    "URL Routing Test" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL 라우팅 테스트"
+          }
+        }
+      }
+    },
+    "URL Test" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🛠 URL 테스트"
+          }
+        }
+      }
+    },
+    "URLs you chose to remember from the profile picker." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필 피커에서 기억하기를 선택한 URL 목록입니다."
+          }
+        }
+      }
+    },
+    "Use * to match subdomains." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "*를 사용하여 서브도메인을 포함한 매칭이 가능합니다."
+          }
+        }
+      }
+    },
+    "Unzip the downloaded file" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다운로드한 파일 압축 해제"
+          }
+        }
+      }
+    },
+    "Version %@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Version %1$@ (%2$@)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버전 %1$@ (%2$@)"
+          }
+        }
+      }
+    },
+    "Welcome to LinkPrism" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism에 오신 것을 환영합니다"
+          }
+        }
+      }
+    },
+    "When a rule's action is set to \"Ask\", a profile picker will appear each time the URL is opened." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙의 동작을 \"물어보기\"로 설정하면, 해당 URL을 열 때 프로필 선택 창이 표시됩니다."
+          }
+        }
+      }
+    },
+    "When you select a profile and check \"Don't ask again for this URL\", it will appear here." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필을 선택할 때 \"이 URL은 다음부터 묻지 않기\"를 체크하면 여기에 표시됩니다."
+          }
+        }
+      }
+    },
+    "Why the Extension is Needed" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확장 프로그램이 필요한 이유"
+          }
+        }
+      }
+    },
+    "Wildcard Match" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "와일드카드 매칭"
+          }
+        }
+      }
+    },
+    "You can install the extension later." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확장 프로그램은 나중에 설치해도 됩니다."
+          }
+        }
+      }
+    },
+    "You can install the extension later from the Help page." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확장 프로그램은 나중에 도움말 페이지에서 설치할 수 있습니다."
+          }
+        }
+      }
+    },
+    "You're running the latest version." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 사용 중인 버전이 최신입니다."
+          }
+        }
+      }
+    },
+    "You're up to date" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최신 버전입니다"
+          }
+        }
+      }
+    },
+    "Your existing %lld rules will be replaced with %lld imported rules. This cannot be undone." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Your existing %1$lld rules will be replaced with %2$lld imported rules. This cannot be undone."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기존 규칙 %1$lld개가 가져온 규칙 %2$lld개로 교체됩니다. 이 작업은 되돌릴 수 없습니다."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

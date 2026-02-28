@@ -1,0 +1,42 @@
+{
+  "appName": {
+    "message": "LinkPrism",
+    "description": "Extension name"
+  },
+  "appDescription": {
+    "message": "Stop juggling Chrome profiles. Let your links find their way home.",
+    "description": "Extension description"
+  },
+  "popupDescription": {
+    "message": "Links matching your rules are routed through the LinkPrism macOS app.",
+    "description": "Description shown in the popup"
+  },
+  "appConnected": {
+    "message": "Connected to LinkPrism",
+    "description": "Status when app is running"
+  },
+  "appDisconnected": {
+    "message": "LinkPrism app is not running",
+    "description": "Status when app is not running"
+  },
+  "detectedProfile": {
+    "message": "Current profile",
+    "description": "Label for detected profile name"
+  },
+  "refreshRules": {
+    "message": "Refresh rules",
+    "description": "Button to manually refresh rules from macOS app"
+  },
+  "downloadApp": {
+    "message": "Download macOS App",
+    "description": "Link to download the macOS app"
+  },
+  "selectProfile": {
+    "message": "Select your profile",
+    "description": "Heading for profile selector when auto-detect fails"
+  },
+  "viewOnGithub": {
+    "message": "View on GitHub",
+    "description": "Link to the GitHub repository"
+  }
+}

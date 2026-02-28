@@ -1,0 +1,32 @@
+{
+  "appName": {
+    "message": "LinkPrism"
+  },
+  "appDescription": {
+    "message": "Chrome 프로필 전환은 그만. 링크가 알아서 제 자리를 찾아갑니다."
+  },
+  "popupDescription": {
+    "message": "규칙에 매칭되는 링크가 LinkPrism macOS 앱을 통해 라우팅됩니다."
+  },
+  "appConnected": {
+    "message": "LinkPrism 연결됨"
+  },
+  "appDisconnected": {
+    "message": "LinkPrism 앱이 실행 중이 아닙니다"
+  },
+  "detectedProfile": {
+    "message": "현재 프로필"
+  },
+  "refreshRules": {
+    "message": "규칙 새로고침"
+  },
+  "downloadApp": {
+    "message": "macOS 앱 다운로드"
+  },
+  "selectProfile": {
+    "message": "프로필을 선택하세요"
+  },
+  "viewOnGithub": {
+    "message": "GitHub에서 보기"
+  }
+}
