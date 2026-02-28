@@ -6,8 +6,8 @@ enum PatternType: String, Codable, CaseIterable {
 
     var displayName: String {
         switch self {
-        case .host:  return "호스트"
-        case .regex: return "정규식"
+        case .host:  return String(localized: "Host")
+        case .regex: return String(localized: "Regex")
         }
     }
 }

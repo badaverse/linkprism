@@ -12,7 +12,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var debugWindow: NSWindow?
     #endif
 
-    /// 최근 처리한 URL (중복 호출 방지용)
+    /// Dedup: last handled URL
     private var lastHandled: (url: String, time: Date)?
 
     // MARK: - Lifecycle
@@ -29,14 +29,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         setupStatusItem()
 
-        // 메뉴바 앱이므로 시작 시 설정창을 띄우지 않음
+        // Menu bar app — close settings window on launch
         DispatchQueue.main.async {
-            for window in NSApp.windows where window.title.contains("설정") {
+            for window in NSApp.windows where window.identifier?.rawValue == "settings" {
                 window.close()
             }
         }
 
-        // 최초 실행 시 온보딩
+        // First-run onboarding
         if !UserDefaults.standard.bool(forKey: "didShowWelcome") {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.showOnboarding()
@@ -44,7 +44,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    // MARK: - 메뉴바 아이콘
+    // MARK: - Status Bar
 
     private func setupStatusItem() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
@@ -57,30 +57,38 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         let menu = NSMenu()
         menu.addItem(NSMenuItem(
-            title: "설정 열기",
+            title: String(localized: "Open Settings"),
             action: #selector(openSettings),
             keyEquivalent: ","
         ))
-        menu.addItem(NSMenuItem(title: "도움말", action: #selector(openHelp), keyEquivalent: "?"))
-        menu.addItem(NSMenuItem(title: "업데이트 확인", action: #selector(checkForUpdates), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(
+            title: String(localized: "Help"),
+            action: #selector(openHelp),
+            keyEquivalent: "?"
+        ))
+        menu.addItem(NSMenuItem(
+            title: String(localized: "Check for Updates"),
+            action: #selector(checkForUpdates),
+            keyEquivalent: ""
+        ))
         #if DEBUG
         menu.addItem(.separator())
         menu.addItem(NSMenuItem(
-            title: "🛠 URL 테스트",
+            title: String(localized: "URL Test"),
             action: #selector(openDebug),
             keyEquivalent: "d"
         ))
         #endif
         menu.addItem(.separator())
         menu.addItem(NSMenuItem(
-            title: "종료",
+            title: String(localized: "Quit"),
             action: #selector(NSApplication.terminate(_:)),
             keyEquivalent: "q"
         ))
         statusItem.menu = menu
     }
 
-    // MARK: - 온보딩
+    // MARK: - Onboarding
 
     private func showOnboarding() {
         let onboarding = OnboardingView(onComplete: { [weak self] in
@@ -95,7 +103,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered,
             defer: false
         )
-        window.title = "ProfilePrism 시작하기"
+        window.title = String(localized: "Get Started with ProfilePrism")
         window.contentView = NSHostingView(rootView: onboarding)
         window.center()
         window.makeKeyAndOrderFront(nil)
@@ -113,17 +121,17 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         onboardingWindow = window
     }
 
-    // MARK: - 설정 열기
+    // MARK: - Open Settings
 
     @objc private func openSettings() {
-        for window in NSApp.windows where window.title.contains("설정") {
+        for window in NSApp.windows where window.identifier?.rawValue == "settings" {
             window.makeKeyAndOrderFront(nil)
             NSApp.activate()
             return
         }
     }
 
-    // MARK: - URL 처리
+    // MARK: - URL Handling
 
     func routeURL(_ url: URL) {
         let now = Date()
@@ -134,7 +142,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         lastHandled = (url.absoluteString, now)
 
-        // profilerouter://route?url=<encoded_url> 형식 처리
+        // profilerouter://route?url=<encoded_url>
         let targetURL: URL
         if url.scheme == "profilerouter",
            let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
@@ -158,15 +166,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    // MARK: - 프로필 선택 창
+    // MARK: - Profile Picker
 
     private func showProfilePicker(for url: URL) {
-        // 이전 창이 있으면 닫기
         pickerWindow?.close()
 
         let profiles = ChromeProfileScanner.scan()
         guard !profiles.isEmpty else {
-            // 프로필을 찾을 수 없으면 기본으로 열기
             Router.openInChrome(url: url, profile: nil)
             return
         }
@@ -191,7 +197,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered,
             defer: false
         )
-        window.title = "프로필 선택"
+        window.title = String(localized: "Select Profile")
         window.contentView = NSHostingView(rootView: picker)
         window.isFloatingPanel = true
         window.level = .floating
@@ -214,7 +220,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         routeURL(url)
     }
 
-    // MARK: - 도움말
+    // MARK: - Help
 
     @objc private func openHelp() {
         if let w = helpWindow {
@@ -227,7 +233,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             styleMask: [.titled, .closable, .resizable],
             backing: .buffered, defer: false
         )
-        window.title = "ProfilePrism 도움말"
+        window.title = String(localized: "ProfilePrism Help")
         window.contentView = NSHostingView(rootView: HelpView())
         window.center()
         window.makeKeyAndOrderFront(nil)
@@ -235,7 +241,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         helpWindow = window
     }
 
-    // MARK: - 업데이트
+    // MARK: - Updates
 
     @objc private func checkForUpdates() {
         Task { @MainActor in
@@ -243,19 +249,19 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             switch result {
             case .upToDate:
                 let alert = NSAlert()
-                alert.messageText = "최신 버전입니다"
-                alert.informativeText = "현재 사용 중인 버전이 최신입니다."
+                alert.messageText = String(localized: "You're up to date")
+                alert.informativeText = String(localized: "You're running the latest version.")
                 alert.alertStyle = .informational
-                alert.addButton(withTitle: "확인")
+                alert.addButton(withTitle: String(localized: "OK"))
                 alert.runModal()
             case .updateAvailable(let release):
                 let alert = NSAlert()
-                alert.messageText = "새 버전이 있습니다"
+                alert.messageText = String(localized: "Update Available")
                 let version = release.tagName.replacingOccurrences(of: "v", with: "")
-                alert.informativeText = "ProfilePrism \(version) 버전을 다운로드할 수 있습니다.\n\n\(release.body)"
+                alert.informativeText = String(localized: "ProfilePrism \(version) is available for download.\n\n\(release.body)")
                 alert.alertStyle = .informational
-                alert.addButton(withTitle: "다운로드")
-                alert.addButton(withTitle: "나중에")
+                alert.addButton(withTitle: String(localized: "Download"))
+                alert.addButton(withTitle: String(localized: "Later"))
                 if alert.runModal() == .alertFirstButtonReturn {
                     if let url = UpdateChecker.dmgDownloadURL(from: release) {
                         NSWorkspace.shared.open(url)
@@ -263,16 +269,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             case .error(let message):
                 let alert = NSAlert()
-                alert.messageText = "업데이트 확인 실패"
+                alert.messageText = String(localized: "Update Check Failed")
                 alert.informativeText = message
                 alert.alertStyle = .warning
-                alert.addButton(withTitle: "확인")
+                alert.addButton(withTitle: String(localized: "OK"))
                 alert.runModal()
             }
         }
     }
 
-    // MARK: - 디버그
+    // MARK: - Debug
 
     #if DEBUG
     @objc private func openDebug() {
@@ -288,7 +294,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered,
             defer: false
         )
-        window.title = "URL 테스트"
+        window.title = String(localized: "URL Test")
         window.contentView = NSHostingView(
             rootView: DebugView()
                 .environmentObject(ConfigManager.shared)
@@ -300,7 +306,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
     #endif
 
-    // MARK: - 윈도우 관리
+    // MARK: - Window Management
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         false

@@ -1,0 +1,22 @@
+{
+  "appName": {
+    "message": "Profile Router",
+    "description": "Extension name"
+  },
+  "appDescription": {
+    "message": "Routes Chrome links to the correct profile via ProfilePrism app",
+    "description": "Extension description"
+  },
+  "domainsLabel": {
+    "message": "Domains to Route",
+    "description": "Label above the domain textarea"
+  },
+  "domainsHint": {
+    "message": "One per line. Links to these domains will be routed through the ProfilePrism app.",
+    "description": "Help text for domains"
+  },
+  "saved": {
+    "message": "Saved",
+    "description": "Confirmation after saving"
+  }
+}

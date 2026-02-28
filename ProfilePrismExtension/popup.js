@@ -1,12 +1,17 @@
+// Localize static text
+document.querySelectorAll('[data-i18n]').forEach(el => {
+  el.textContent = chrome.i18n.getMessage(el.dataset.i18n);
+});
+
 const textarea = document.getElementById('domains');
 const savedEl = document.getElementById('saved');
 
-// 저장된 도메인 로드
+// Load saved domains
 chrome.storage.local.get('domains', (result) => {
   textarea.value = (result.domains || []).join('\n');
 });
 
-// 입력 시 자동 저장
+// Auto-save on input
 let saveTimer;
 textarea.addEventListener('input', () => {
   clearTimeout(saveTimer);
