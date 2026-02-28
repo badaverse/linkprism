@@ -12,37 +12,37 @@
 			containerPortal = FF1D86D42F51257E00A4E643 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FF1D86DB2F51257E00A4E643;
-			remoteInfo = ProfileRouter;
+			remoteInfo = ProfilePrism;
 		};
 		FF1D86F52F51258000A4E643 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FF1D86D42F51257E00A4E643 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FF1D86DB2F51257E00A4E643;
-			remoteInfo = ProfileRouter;
+			remoteInfo = ProfilePrism;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FF1D86DC2F51257E00A4E643 /* ProfileRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF1D86EA2F51258000A4E643 /* ProfileRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfileRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF1D86F42F51258000A4E643 /* ProfileRouterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfileRouterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1D86DC2F51257E00A4E643 /* ProfilePrism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfilePrism.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1D86EA2F51258000A4E643 /* ProfilePrismTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfilePrismTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1D86F42F51258000A4E643 /* ProfilePrismUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfilePrismUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FF1D86DE2F51257E00A4E643 /* ProfileRouter */ = {
+		FF1D86DE2F51257E00A4E643 /* ProfilePrism */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ProfileRouter;
+			path = ProfilePrism;
 			sourceTree = "<group>";
 		};
-		FF1D86ED2F51258000A4E643 /* ProfileRouterTests */ = {
+		FF1D86ED2F51258000A4E643 /* ProfilePrismTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ProfileRouterTests;
+			path = ProfilePrismTests;
 			sourceTree = "<group>";
 		};
-		FF1D86F72F51258000A4E643 /* ProfileRouterUITests */ = {
+		FF1D86F72F51258000A4E643 /* ProfilePrismUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ProfileRouterUITests;
+			path = ProfilePrismUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +75,9 @@
 		FF1D86D32F51257E00A4E643 = {
 			isa = PBXGroup;
 			children = (
-				FF1D86DE2F51257E00A4E643 /* ProfileRouter */,
-				FF1D86ED2F51258000A4E643 /* ProfileRouterTests */,
-				FF1D86F72F51258000A4E643 /* ProfileRouterUITests */,
+				FF1D86DE2F51257E00A4E643 /* ProfilePrism */,
+				FF1D86ED2F51258000A4E643 /* ProfilePrismTests */,
+				FF1D86F72F51258000A4E643 /* ProfilePrismUITests */,
 				FF1D86DD2F51257E00A4E643 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +85,9 @@
 		FF1D86DD2F51257E00A4E643 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF1D86DC2F51257E00A4E643 /* ProfileRouter.app */,
-				FF1D86EA2F51258000A4E643 /* ProfileRouterTests.xctest */,
-				FF1D86F42F51258000A4E643 /* ProfileRouterUITests.xctest */,
+				FF1D86DC2F51257E00A4E643 /* ProfilePrism.app */,
+				FF1D86EA2F51258000A4E643 /* ProfilePrismTests.xctest */,
+				FF1D86F42F51258000A4E643 /* ProfilePrismUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FF1D86DB2F51257E00A4E643 /* ProfileRouter */ = {
+		FF1D86DB2F51257E00A4E643 /* ProfilePrism */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF1D86FE2F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfileRouter" */;
+			buildConfigurationList = FF1D86FE2F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfilePrism" */;
 			buildPhases = (
 				FF1D86D82F51257E00A4E643 /* Sources */,
 				FF1D86D92F51257E00A4E643 /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				FF1D86DE2F51257E00A4E643 /* ProfileRouter */,
+				FF1D86DE2F51257E00A4E643 /* ProfilePrism */,
 			);
-			name = ProfileRouter;
+			name = ProfilePrism;
 			packageProductDependencies = (
 			);
-			productName = ProfileRouter;
-			productReference = FF1D86DC2F51257E00A4E643 /* ProfileRouter.app */;
+			productName = ProfilePrism;
+			productReference = FF1D86DC2F51257E00A4E643 /* ProfilePrism.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FF1D86E92F51258000A4E643 /* ProfileRouterTests */ = {
+		FF1D86E92F51258000A4E643 /* ProfilePrismTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF1D87012F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfileRouterTests" */;
+			buildConfigurationList = FF1D87012F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfilePrismTests" */;
 			buildPhases = (
 				FF1D86E62F51258000A4E643 /* Sources */,
 				FF1D86E72F51258000A4E643 /* Frameworks */,
@@ -131,18 +131,18 @@
 				FF1D86EC2F51258000A4E643 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				FF1D86ED2F51258000A4E643 /* ProfileRouterTests */,
+				FF1D86ED2F51258000A4E643 /* ProfilePrismTests */,
 			);
-			name = ProfileRouterTests;
+			name = ProfilePrismTests;
 			packageProductDependencies = (
 			);
-			productName = ProfileRouterTests;
-			productReference = FF1D86EA2F51258000A4E643 /* ProfileRouterTests.xctest */;
+			productName = ProfilePrismTests;
+			productReference = FF1D86EA2F51258000A4E643 /* ProfilePrismTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FF1D86F32F51258000A4E643 /* ProfileRouterUITests */ = {
+		FF1D86F32F51258000A4E643 /* ProfilePrismUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF1D87042F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfileRouterUITests" */;
+			buildConfigurationList = FF1D87042F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfilePrismUITests" */;
 			buildPhases = (
 				FF1D86F02F51258000A4E643 /* Sources */,
 				FF1D86F12F51258000A4E643 /* Frameworks */,
@@ -154,13 +154,13 @@
 				FF1D86F62F51258000A4E643 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				FF1D86F72F51258000A4E643 /* ProfileRouterUITests */,
+				FF1D86F72F51258000A4E643 /* ProfilePrismUITests */,
 			);
-			name = ProfileRouterUITests;
+			name = ProfilePrismUITests;
 			packageProductDependencies = (
 			);
-			productName = ProfileRouterUITests;
-			productReference = FF1D86F42F51258000A4E643 /* ProfileRouterUITests.xctest */;
+			productName = ProfilePrismUITests;
+			productReference = FF1D86F42F51258000A4E643 /* ProfilePrismUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FF1D86D72F51257E00A4E643 /* Build configuration list for PBXProject "ProfileRouter" */;
+			buildConfigurationList = FF1D86D72F51257E00A4E643 /* Build configuration list for PBXProject "ProfilePrism" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF1D86DB2F51257E00A4E643 /* ProfileRouter */,
-				FF1D86E92F51258000A4E643 /* ProfileRouterTests */,
-				FF1D86F32F51258000A4E643 /* ProfileRouterUITests */,
+				FF1D86DB2F51257E00A4E643 /* ProfilePrism */,
+				FF1D86E92F51258000A4E643 /* ProfilePrismTests */,
+				FF1D86F32F51258000A4E643 /* ProfilePrismUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		FF1D86EC2F51258000A4E643 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FF1D86DB2F51257E00A4E643 /* ProfileRouter */;
+			target = FF1D86DB2F51257E00A4E643 /* ProfilePrism */;
 			targetProxy = FF1D86EB2F51258000A4E643 /* PBXContainerItemProxy */;
 		};
 		FF1D86F62F51258000A4E643 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FF1D86DB2F51257E00A4E643 /* ProfileRouter */;
+			target = FF1D86DB2F51257E00A4E643 /* ProfilePrism */;
 			targetProxy = FF1D86F52F51258000A4E643 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -388,13 +388,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ProfileRouter/ProfileRouter.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ProfilePrism/ProfilePrism.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UXJA9A3M7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = ProfileRouter/Info.plist;
+				INFOPLIST_FILE = ProfilePrism/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -410,7 +410,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfileRouter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfilePrism;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -427,13 +427,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ProfileRouter/ProfileRouter.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ProfilePrism/ProfilePrism.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UXJA9A3M7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = ProfileRouter/Info.plist;
+				INFOPLIST_FILE = ProfilePrism/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -449,7 +449,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfileRouter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfilePrism;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -471,14 +471,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfileRouterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfilePrismTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfileRouter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProfileRouter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfilePrism.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProfilePrism";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Debug;
@@ -493,14 +493,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfileRouterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfilePrismTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfileRouter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProfileRouter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfilePrism.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProfilePrism";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Release;
@@ -514,14 +514,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfileRouterUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfilePrismUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = ProfileRouter;
+				TEST_TARGET_NAME = ProfilePrism;
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Debug;
@@ -535,14 +535,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfileRouterUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.badaverse.ProfilePrismUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = ProfileRouter;
+				TEST_TARGET_NAME = ProfilePrism;
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Release;
@@ -550,7 +550,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF1D86D72F51257E00A4E643 /* Build configuration list for PBXProject "ProfileRouter" */ = {
+		FF1D86D72F51257E00A4E643 /* Build configuration list for PBXProject "ProfilePrism" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF1D86FC2F51258000A4E643 /* Debug */,
@@ -559,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF1D86FE2F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfileRouter" */ = {
+		FF1D86FE2F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfilePrism" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF1D86FF2F51258000A4E643 /* Debug */,
@@ -568,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF1D87012F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfileRouterTests" */ = {
+		FF1D87012F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfilePrismTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF1D87022F51258000A4E643 /* Debug */,
@@ -577,7 +577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF1D87042F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfileRouterUITests" */ = {
+		FF1D87042F51258000A4E643 /* Build configuration list for PBXNativeTarget "ProfilePrismUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF1D87052F51258000A4E643 /* Debug */,

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Profile Router",
   "version": "0.1",
-  "description": "Routes Chrome links to the correct profile via ProfileRouter app",
+  "description": "Routes Chrome links to the correct profile via ProfilePrism app",
   "permissions": ["storage"],
   "background": {
     "service_worker": "background.js"

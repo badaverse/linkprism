@@ -12,7 +12,7 @@ final class ConfigManager: ObservableObject {
     private init() {
         let appSupport = FileManager.default
             .urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-        let appDir = appSupport.appendingPathComponent("ProfileRouter")
+        let appDir = appSupport.appendingPathComponent("ProfilePrism")
         try? FileManager.default.createDirectory(at: appDir, withIntermediateDirectories: true)
         configURL = appDir.appendingPathComponent("rules.json")
         load()

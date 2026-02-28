@@ -1,5 +1,5 @@
-// ProfileRouter Chrome Extension - Content Script
-// 설정된 도메인의 링크를 클릭하면 ProfileRouter 앱으로 라우팅합니다.
+// ProfilePrism Chrome Extension - Content Script
+// 설정된 도메인의 링크를 클릭하면 ProfilePrism 앱으로 라우팅합니다.
 
 let domains = [];
 
@@ -39,7 +39,7 @@ function handleLinkClick(e) {
     if (shouldRoute(host)) {
       e.preventDefault();
       e.stopPropagation();
-      chrome.runtime.sendMessage({ type: 'openViaProfileRouter', url });
+      chrome.runtime.sendMessage({ type: 'openViaProfilePrism', url });
     }
   } catch {}
 }

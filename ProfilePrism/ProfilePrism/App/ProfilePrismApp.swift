@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct ProfileRouterApp: App {
+struct ProfilePrismApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {

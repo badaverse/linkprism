@@ -1,13 +1,13 @@
 //
-//  ProfileRouterUITestsLaunchTests.swift
-//  ProfileRouterUITests
+//  ProfilePrismUITestsLaunchTests.swift
+//  ProfilePrismUITests
 //
 //  Created by badaverse on 2/27/26.
 //
 
 import XCTest
 
-final class ProfileRouterUITestsLaunchTests: XCTestCase {
+final class ProfilePrismUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
