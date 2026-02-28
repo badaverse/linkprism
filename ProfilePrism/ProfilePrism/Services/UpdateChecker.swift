@@ -31,9 +31,8 @@ enum UpdateCheckResult {
 }
 
 enum UpdateChecker {
-    // TODO: Replace with actual GitHub repo
-    private static let repoOwner = "OWNER"
-    private static let repoName = "profile-prism"
+    private static let repoOwner = "badaverse"
+    private static let repoName = "profileprism"
 
     static func check() async -> UpdateCheckResult {
         let urlString = "https://api.github.com/repos/\(repoOwner)/\(repoName)/releases/latest"
