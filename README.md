@@ -52,7 +52,7 @@ Build and run with **Xcode 15+** (requires macOS 14 Sonoma or later).
 The macOS default browser handler can't intercept links clicked *within* Chrome. The extension solves this.
 
 **Option A — GitHub Release (recommended):**
-1. Download `LinkPrism-Extension-{version}.zip` from [GitHub Releases](https://github.com/badaverse/linkprism/releases/latest)
+1. Download `LinkPrismExtension.zip` from [GitHub Releases](https://github.com/badaverse/linkprism/releases/latest)
 2. Unzip the file
 3. Open `chrome://extensions/` in Chrome
 4. Enable **Developer mode** (toggle in top-right)

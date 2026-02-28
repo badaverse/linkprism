@@ -37,22 +37,12 @@
 
 > **참고:** 처음 실행 시 macOS 보안 경고가 나타날 수 있습니다. 앱을 우클릭하고 **열기**를 선택하면 Gatekeeper를 우회할 수 있습니다.
 
-### 소스에서 빌드
-
-```bash
-git clone https://github.com/badaverse/linkprism.git
-cd linkprism
-open LinkPrism/LinkPrism.xcodeproj
-```
-
-**Xcode 15+**로 빌드 및 실행 (macOS 14 Sonoma 이상 필요).
-
 ### Chrome 확장 프로그램 (권장)
 
 macOS 기본 브라우저 핸들러는 Chrome *내부*에서 클릭한 링크를 가로챌 수 없습니다. 확장 프로그램이 이 문제를 해결합니다.
 
 **Option A — GitHub Release (권장):**
-1. [GitHub Releases](https://github.com/badaverse/linkprism/releases/latest)에서 `LinkPrism-Extension-{version}.zip` 다운로드
+1. [GitHub Releases](https://github.com/badaverse/linkprism/releases/latest)에서 `LinkPrismExtension.zip` 다운로드
 2. 압축 해제
 3. Chrome에서 `chrome://extensions/` 열기
 4. **개발자 모드** 활성화 (우측 상단 토글)
@@ -63,6 +53,16 @@ macOS 기본 브라우저 핸들러는 Chrome *내부*에서 클릭한 링크를
 2. Chrome에서 `chrome://extensions/` 열기
 3. **개발자 모드** 활성화 (우측 상단 토글)
 4. **압축해제된 확장 프로그램을 로드합니다** → `LinkPrismExtension/` 폴더 선택
+
+### 소스에서 빌드
+
+```bash
+git clone https://github.com/badaverse/linkprism.git
+cd linkprism
+open LinkPrism/LinkPrism.xcodeproj
+```
+
+**Xcode 15+**로 빌드 및 실행 (macOS 14 Sonoma 이상 필요).
 
 ## 빠른 시작
 
