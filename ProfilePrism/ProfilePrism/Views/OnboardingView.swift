@@ -30,13 +30,13 @@ struct OnboardingView: View {
                 }
                 Spacer()
                 if currentStep > 0 {
-                    Button("이전") { withAnimation { currentStep -= 1 } }
+                    Button("Previous") { withAnimation { currentStep -= 1 } }
                 }
                 if currentStep < totalSteps - 1 {
-                    Button("다음") { withAnimation { currentStep += 1 } }
+                    Button("Next") { withAnimation { currentStep += 1 } }
                         .buttonStyle(.borderedProminent)
                 } else {
-                    Button("시작하기") { onComplete() }
+                    Button("Get Started") { onComplete() }
                         .buttonStyle(.borderedProminent)
                 }
             }
@@ -51,15 +51,15 @@ struct OnboardingView: View {
             Image(nsImage: NSApp.applicationIconImage)
                 .resizable()
                 .frame(width: 80, height: 80)
-            Text("ProfilePrism에 오신 것을 환영합니다")
+            Text("Welcome to ProfilePrism")
                 .font(.title2.bold())
-            Text("URL을 자동으로 올바른 Chrome 프로필로\n라우팅하는 macOS 메뉴바 앱입니다.")
+            Text("A macOS menu bar app that automatically\nroutes URLs to the right Chrome profile.")
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
             VStack(alignment: .leading, spacing: 10) {
-                featureRow(icon: "globe", text: "도메인별 Chrome 프로필 자동 선택")
-                featureRow(icon: "arrow.triangle.branch", text: "호스트, 와일드카드, 정규식 패턴 지원")
-                featureRow(icon: "questionmark.circle", text: "\"물어보기\" 모드로 매번 프로필 선택 가능")
+                featureRow(icon: "globe", text: String(localized: "Auto-select Chrome profile by domain"))
+                featureRow(icon: "arrow.triangle.branch", text: String(localized: "Host, wildcard, and regex pattern support"))
+                featureRow(icon: "questionmark.circle", text: String(localized: "\"Ask\" mode to choose profile each time"))
             }
             .padding(.top, 8)
         }
@@ -70,19 +70,19 @@ struct OnboardingView: View {
             Image(systemName: "globe.americas.fill")
                 .font(.system(size: 48))
                 .foregroundStyle(.blue)
-            Text("기본 브라우저로 설정")
+            Text("Set as Default Browser")
                 .font(.title2.bold())
-            Text("ProfilePrism이 URL을 받으려면\n기본 웹 브라우저로 설정해야 합니다.")
+            Text("ProfilePrism needs to be set as the\ndefault web browser to receive URLs.")
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
-            Button("시스템 설정 열기") {
+            Button("Open System Settings") {
                 if let url = URL(string: "x-apple.systempreferences:com.apple.Desktop-Settings.extension") {
                     NSWorkspace.shared.open(url)
                 }
             }
             .buttonStyle(.borderedProminent)
             .controlSize(.large)
-            Text("시스템 설정 → 데스크탑 및 Dock → 기본 웹 브라우저\n에서 \"ProfilePrism\"을 선택하세요.")
+            Text("System Settings \u{2192} Desktop & Dock \u{2192} Default web browser\nSelect \"ProfilePrism\".")
                 .font(.caption)
                 .foregroundStyle(.tertiary)
                 .multilineTextAlignment(.center)
@@ -94,21 +94,21 @@ struct OnboardingView: View {
             Image(systemName: "puzzlepiece.extension.fill")
                 .font(.system(size: 48))
                 .foregroundStyle(.orange)
-            Text("Chrome 확장 프로그램")
+            Text("Chrome Extension")
                 .font(.title2.bold())
-            Text("Chrome 내부에서 클릭한 링크는 기본 브라우저를\n거치지 않아 ProfilePrism이 개입할 수 없습니다.\n확장 프로그램을 설치하면 이 문제를 해결할 수 있습니다.")
+            Text("Links clicked inside Chrome bypass the default\nbrowser, so ProfilePrism can't intercept them.\nInstall the extension to solve this.")
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
                 .font(.callout)
             VStack(alignment: .leading, spacing: 8) {
-                stepRow(number: 1, text: "Chrome에서 chrome://extensions 열기")
-                stepRow(number: 2, text: "\"개발자 모드\" 활성화")
-                stepRow(number: 3, text: "\"압축해제된 확장 프로그램을 로드합니다\" 클릭")
-                stepRow(number: 4, text: "ProfilePrismExtension 폴더 선택")
+                stepRow(number: 1, text: String(localized: "Open chrome://extensions in Chrome"))
+                stepRow(number: 2, text: String(localized: "Enable \"Developer mode\""))
+                stepRow(number: 3, text: String(localized: "Click \"Load unpacked\""))
+                stepRow(number: 4, text: String(localized: "Select the ProfilePrismExtension folder"))
             }
             .padding(12)
             .background(RoundedRectangle(cornerRadius: 8).fill(.secondary.opacity(0.08)))
-            Text("확장 프로그램은 나중에 설치해도 됩니다.")
+            Text("You can install the extension later.")
                 .font(.caption)
                 .foregroundStyle(.tertiary)
         }

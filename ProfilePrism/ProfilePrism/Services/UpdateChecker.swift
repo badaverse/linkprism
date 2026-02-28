@@ -37,7 +37,9 @@ enum UpdateChecker {
 
     static func check() async -> UpdateCheckResult {
         let urlString = "https://api.github.com/repos/\(repoOwner)/\(repoName)/releases/latest"
-        guard let url = URL(string: urlString) else { return .error("잘못된 URL") }
+        guard let url = URL(string: urlString) else {
+            return .error(String(localized: "Invalid URL"))
+        }
 
         var request = URLRequest(url: url)
         request.setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
@@ -46,7 +48,7 @@ enum UpdateChecker {
             let (data, response) = try await URLSession.shared.data(for: request)
             guard let httpResponse = response as? HTTPURLResponse,
                   httpResponse.statusCode == 200 else {
-                return .error("서버 응답 오류")
+                return .error(String(localized: "Server response error"))
             }
             let release = try JSONDecoder().decode(GitHubRelease.self, from: data)
             let latestVersion = release.tagName
@@ -59,7 +61,7 @@ enum UpdateChecker {
                 return .upToDate
             }
         } catch {
-            return .error("네트워크 오류: \(error.localizedDescription)")
+            return .error(String(localized: "Network error: \(error.localizedDescription)"))
         }
     }
 

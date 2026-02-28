@@ -1,0 +1,999 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Profile Router Settings" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile Router 설정"
+          }
+        }
+      }
+    },
+    "Open Settings" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정 열기"
+          }
+        }
+      }
+    },
+    "URL Test" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🛠 URL 테스트"
+          }
+        }
+      }
+    },
+    "Quit" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "종료"
+          }
+        }
+      }
+    },
+    "Profile Router is\nrunning in the menu bar" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile Router가\n메뉴바에서 실행 중입니다"
+          }
+        }
+      }
+    },
+    "Select Profile" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필 선택"
+          }
+        }
+      }
+    },
+    "Profile Router" : {
+
+    },
+    "Rules are matched in order from top. The first match is used." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위에서부터 순서대로 매칭되며, 첫 번째 일치 규칙이 사용됩니다."
+          }
+        }
+      }
+    },
+    "Edit" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "편집"
+          }
+        }
+      }
+    },
+    "Enabled" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "활성화"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제"
+          }
+        }
+      }
+    },
+    "Add Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 추가"
+          }
+        }
+      }
+    },
+    "Delete Selected Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택한 규칙 삭제"
+          }
+        }
+      }
+    },
+    "Edit Selected Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택한 규칙 편집"
+          }
+        }
+      }
+    },
+    "Edit Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 편집"
+          }
+        }
+      }
+    },
+    "Host" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트"
+          }
+        }
+      }
+    },
+    "Regex Pattern" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정규식 패턴"
+          }
+        }
+      }
+    },
+    "Regex" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정규식"
+          }
+        }
+      }
+    },
+    "e.g. notion.so or *.atlassian.net" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예: notion.so 또는 *.atlassian.net"
+          }
+        }
+      }
+    },
+    "e.g. .*\\.corp\\.com" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예: .*\\.corp\\.com"
+          }
+        }
+      }
+    },
+    "Ask which profile every time" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "열 때마다 프로필 물어보기"
+          }
+        }
+      }
+    },
+    "Chrome Profile Directory" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 프로필 디렉토리"
+          }
+        }
+      }
+    },
+    "e.g. Profile 2 or Default" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예: Profile 2 또는 Default"
+          }
+        }
+      }
+    },
+    "Directory: %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "폴더명 기준: %@"
+          }
+        }
+      }
+    },
+    "Not selected" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택 안 됨"
+          }
+        }
+      }
+    },
+    "Enable Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 활성화"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장"
+          }
+        }
+      }
+    },
+    "Invalid regex: %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유효하지 않은 정규식: %@"
+          }
+        }
+      }
+    },
+    "Ask" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물어보기"
+          }
+        }
+      }
+    },
+    "URL Routing Test" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL 라우팅 테스트"
+          }
+        }
+      }
+    },
+    "Enter URL" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL 입력"
+          }
+        }
+      }
+    },
+    "Test" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "테스트"
+          }
+        }
+      }
+    },
+    "Matched Rule" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "매칭 규칙"
+          }
+        }
+      }
+    },
+    "None" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "없음"
+          }
+        }
+      }
+    },
+    "Result" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결과"
+          }
+        }
+      }
+    },
+    "Profile" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필"
+          }
+        }
+      }
+    },
+    "Open in Browser" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "실제로 열기"
+          }
+        }
+      }
+    },
+    "Invalid URL" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잘못된 URL"
+          }
+        }
+      }
+    },
+    "Open in Profile" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필로 열기"
+          }
+        }
+      }
+    },
+    "Default Chrome (No Match)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본 Chrome (매칭 없음)"
+          }
+        }
+      }
+    },
+    "Help" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도움말"
+          }
+        }
+      }
+    },
+    "Check for Updates" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트 확인"
+          }
+        }
+      }
+    },
+    "Get Started with ProfilePrism" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ProfilePrism 시작하기"
+          }
+        }
+      }
+    },
+    "ProfilePrism Help" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ProfilePrism 도움말"
+          }
+        }
+      }
+    },
+    "You're up to date" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최신 버전입니다"
+          }
+        }
+      }
+    },
+    "You're running the latest version." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 사용 중인 버전이 최신입니다."
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인"
+          }
+        }
+      }
+    },
+    "Update Available" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새 버전이 있습니다"
+          }
+        }
+      }
+    },
+    "ProfilePrism %@ is available for download.\n\n%@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ProfilePrism %@ 버전을 다운로드할 수 있습니다.\n\n%@"
+          }
+        }
+      }
+    },
+    "Download" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다운로드"
+          }
+        }
+      }
+    },
+    "Later" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나중에"
+          }
+        }
+      }
+    },
+    "Update Check Failed" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트 확인 실패"
+          }
+        }
+      }
+    },
+    "Server response error" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "서버 응답 오류"
+          }
+        }
+      }
+    },
+    "Network error: %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네트워크 오류: %@"
+          }
+        }
+      }
+    },
+    "Host Pattern Matching" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트 패턴 매칭"
+          }
+        }
+      }
+    },
+    "Rules are evaluated from top to bottom. The first matching rule is applied." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙은 위에서 아래로 순서대로 평가되며, 첫 번째로 일치하는 규칙이 적용됩니다."
+          }
+        }
+      }
+    },
+    "Exact Match" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정확한 매칭"
+          }
+        }
+      }
+    },
+    "Matches when the hostname is an exact match." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트명이 정확히 일치할 때 매칭됩니다."
+          }
+        }
+      }
+    },
+    "Wildcard Match" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "와일드카드 매칭"
+          }
+        }
+      }
+    },
+    "Use * to match subdomains." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "*를 사용하여 서브도메인을 포함한 매칭이 가능합니다."
+          }
+        }
+      }
+    },
+    "This pattern matches all subdomains such as jira.atlassian.net, confluence.atlassian.net, etc." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 패턴은 jira.atlassian.net, confluence.atlassian.net 등 모든 서브도메인에 매칭됩니다."
+          }
+        }
+      }
+    },
+    "Supports regex patterns using NSRegularExpression. Regex is matched against the hostname only." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NSRegularExpression을 사용한 정규식 패턴을 지원합니다. 정규식은 호스트명에 대해서만 매칭됩니다."
+          }
+        }
+      }
+    },
+    "Example:" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예시:"
+          }
+        }
+      }
+    },
+    "This pattern matches all subdomains of corp.example.com." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 패턴은 corp.example.com의 모든 서브도메인에 매칭됩니다."
+          }
+        }
+      }
+    },
+    "Ask Feature" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물어보기 기능"
+          }
+        }
+      }
+    },
+    "When a rule's action is set to \"Ask\", a profile picker will appear each time the URL is opened." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙의 동작을 \"물어보기\"로 설정하면, 해당 URL을 열 때 프로필 선택 창이 표시됩니다."
+          }
+        }
+      }
+    },
+    "This is useful for domains used in multiple contexts (e.g., GitHub, Google Docs). You can choose which profile to use each time." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여러 컨텍스트에서 사용하는 도메인(예: GitHub, Google Docs 등)에 유용합니다. 매번 어떤 프로필로 열지 직접 선택할 수 있습니다."
+          }
+        }
+      }
+    },
+    "Finding Chrome Profile Directory" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 프로필 디렉토리 찾기"
+          }
+        }
+      }
+    },
+    "ProfilePrism automatically detects Chrome profile directories. To check manually:" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 프로필 디렉토리는 ProfilePrism이 자동으로 감지합니다. 수동으로 확인하려면:"
+          }
+        }
+      }
+    },
+    "1. Enter the following URL in Chrome's address bar:" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. Chrome 주소창에 아래 주소를 입력합니다:"
+          }
+        }
+      }
+    },
+    "2. The last folder name in the \"Profile Path\" field is the profile directory." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. \"프로필 경로\" 항목에서 마지막 폴더 이름이 프로필 디렉토리입니다."
+          }
+        }
+      }
+    },
+    "In the path above, \"Profile 1\" is the profile directory name." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위 경로에서 \"Profile 1\"이 프로필 디렉토리 이름입니다."
+          }
+        }
+      }
+    },
+    "Chrome Extension" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 확장 프로그램"
+          }
+        }
+      }
+    },
+    "Chrome handles link clicks internally, so macOS default browser settings alone cannot redirect links clicked within Chrome to ProfilePrism." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome은 내부적으로 링크 클릭을 직접 처리하기 때문에, macOS 기본 브라우저 설정만으로는 Chrome 내부에서 클릭한 링크를 ProfilePrism으로 전달할 수 없습니다."
+          }
+        }
+      }
+    },
+    "Why the Extension is Needed" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확장 프로그램이 필요한 이유"
+          }
+        }
+      }
+    },
+    "The Chrome extension intercepts links clicked within Chrome and forwards them to ProfilePrism via the profileprism:// scheme." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 확장 프로그램은 Chrome 내부에서 클릭한 링크를 가로채어 profileprism:// 스킴을 통해 ProfilePrism으로 전달합니다."
+          }
+        }
+      }
+    },
+    "Installation" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설치 방법"
+          }
+        }
+      }
+    },
+    "1. Open chrome://extensions in Chrome." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. Chrome에서 chrome://extensions 페이지를 엽니다."
+          }
+        }
+      }
+    },
+    "2. Enable \"Developer mode\"." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. \"개발자 모드\"를 활성화합니다."
+          }
+        }
+      }
+    },
+    "3. Click \"Load unpacked\"." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. \"압축해제된 확장 프로그램을 로드합니다\" 버튼을 클릭합니다."
+          }
+        }
+      }
+    },
+    "4. Select the ProfilePrism extension folder." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. ProfilePrism 확장 프로그램 폴더를 선택합니다."
+          }
+        }
+      }
+    },
+    "Previous" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이전"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음"
+          }
+        }
+      }
+    },
+    "Get Started" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시작하기"
+          }
+        }
+      }
+    },
+    "Welcome to ProfilePrism" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ProfilePrism에 오신 것을 환영합니다"
+          }
+        }
+      }
+    },
+    "A macOS menu bar app that automatically\nroutes URLs to the right Chrome profile." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL을 자동으로 올바른 Chrome 프로필로\n라우팅하는 macOS 메뉴바 앱입니다."
+          }
+        }
+      }
+    },
+    "Auto-select Chrome profile by domain" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도메인별 Chrome 프로필 자동 선택"
+          }
+        }
+      }
+    },
+    "Host, wildcard, and regex pattern support" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트, 와일드카드, 정규식 패턴 지원"
+          }
+        }
+      }
+    },
+    "\"Ask\" mode to choose profile each time" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"물어보기\" 모드로 매번 프로필 선택 가능"
+          }
+        }
+      }
+    },
+    "Set as Default Browser" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본 브라우저로 설정"
+          }
+        }
+      }
+    },
+    "ProfilePrism needs to be set as the\ndefault web browser to receive URLs." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ProfilePrism이 URL을 받으려면\n기본 웹 브라우저로 설정해야 합니다."
+          }
+        }
+      }
+    },
+    "Open System Settings" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시스템 설정 열기"
+          }
+        }
+      }
+    },
+    "System Settings → Desktop & Dock → Default web browser\nSelect \"ProfilePrism\"." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시스템 설정 → 데스크탑 및 Dock → 기본 웹 브라우저\n에서 \"ProfilePrism\"을 선택하세요."
+          }
+        }
+      }
+    },
+    "Links clicked inside Chrome bypass the default\nbrowser, so ProfilePrism can't intercept them.\nInstall the extension to solve this." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 내부에서 클릭한 링크는 기본 브라우저를\n거치지 않아 ProfilePrism이 개입할 수 없습니다.\n확장 프로그램을 설치하면 이 문제를 해결할 수 있습니다."
+          }
+        }
+      }
+    },
+    "Open chrome://extensions in Chrome" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome에서 chrome://extensions 열기"
+          }
+        }
+      }
+    },
+    "Enable \"Developer mode\"" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"개발자 모드\" 활성화"
+          }
+        }
+      }
+    },
+    "Click \"Load unpacked\"" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"압축해제된 확장 프로그램을 로드합니다\" 클릭"
+          }
+        }
+      }
+    },
+    "Select the ProfilePrismExtension folder" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ProfilePrismExtension 폴더 선택"
+          }
+        }
+      }
+    },
+    "You can install the extension later." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확장 프로그램은 나중에 설치해도 됩니다."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

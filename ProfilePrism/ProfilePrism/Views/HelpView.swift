@@ -19,21 +19,21 @@ struct HelpView: View {
         .frame(minWidth: 480, minHeight: 400)
     }
 
-    // MARK: - 호스트 패턴 매칭
+    // MARK: - Host Pattern Matching
 
     private func hostPatternSection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("호스트 패턴 매칭")
+            Text("Host Pattern Matching")
                 .font(.headline)
 
-            Text("규칙은 위에서 아래로 순서대로 평가되며, 첫 번째로 일치하는 규칙이 적용됩니다.")
+            Text("Rules are evaluated from top to bottom. The first matching rule is applied.")
                 .font(.body)
 
-            Text("정확한 매칭")
+            Text("Exact Match")
                 .font(.subheadline)
                 .bold()
 
-            Text("호스트명이 정확히 일치할 때 매칭됩니다.")
+            Text("Matches when the hostname is an exact match.")
                 .font(.body)
 
             Text("atlassian.net")
@@ -42,11 +42,11 @@ struct HelpView: View {
                 .background(Color.secondary.opacity(0.1))
                 .cornerRadius(4)
 
-            Text("와일드카드 매칭")
+            Text("Wildcard Match")
                 .font(.subheadline)
                 .bold()
 
-            Text("*를 사용하여 서브도메인을 포함한 매칭이 가능합니다.")
+            Text("Use * to match subdomains.")
                 .font(.body)
 
             Text("*.atlassian.net")
@@ -55,23 +55,23 @@ struct HelpView: View {
                 .background(Color.secondary.opacity(0.1))
                 .cornerRadius(4)
 
-            Text("이 패턴은 jira.atlassian.net, confluence.atlassian.net 등 모든 서브도메인에 매칭됩니다.")
+            Text("This pattern matches all subdomains such as jira.atlassian.net, confluence.atlassian.net, etc.")
                 .font(.body)
                 .foregroundStyle(.secondary)
         }
     }
 
-    // MARK: - 정규식 패턴
+    // MARK: - Regex Pattern
 
     private func regexPatternSection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("정규식 패턴")
+            Text("Regex Pattern")
                 .font(.headline)
 
-            Text("NSRegularExpression을 사용한 정규식 패턴을 지원합니다. 정규식은 호스트명에 대해서만 매칭됩니다.")
+            Text("Supports regex patterns using NSRegularExpression. Regex is matched against the hostname only.")
                 .font(.body)
 
-            Text("예시:")
+            Text("Example:")
                 .font(.body)
                 .bold()
 
@@ -81,39 +81,39 @@ struct HelpView: View {
                 .background(Color.secondary.opacity(0.1))
                 .cornerRadius(4)
 
-            Text("이 패턴은 corp.example.com의 모든 서브도메인에 매칭됩니다.")
+            Text("This pattern matches all subdomains of corp.example.com.")
                 .font(.body)
                 .foregroundStyle(.secondary)
         }
     }
 
-    // MARK: - 물어보기 기능
+    // MARK: - Ask Feature
 
     private func askFeatureSection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("물어보기 기능")
+            Text("Ask Feature")
                 .font(.headline)
 
-            Text("규칙의 동작을 \"물어보기\"로 설정하면, 해당 URL을 열 때 프로필 선택 창이 표시됩니다.")
+            Text("When a rule's action is set to \"Ask\", a profile picker will appear each time the URL is opened.")
                 .font(.body)
 
-            Text("여러 컨텍스트에서 사용하는 도메인(예: GitHub, Google Docs 등)에 유용합니다. 매번 어떤 프로필로 열지 직접 선택할 수 있습니다.")
+            Text("This is useful for domains used in multiple contexts (e.g., GitHub, Google Docs). You can choose which profile to use each time.")
                 .font(.body)
         }
     }
 
-    // MARK: - Chrome 프로필 디렉토리 찾기
+    // MARK: - Finding Chrome Profile Directory
 
     private func chromeProfileDirectorySection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Chrome 프로필 디렉토리 찾기")
+            Text("Finding Chrome Profile Directory")
                 .font(.headline)
 
-            Text("Chrome 프로필 디렉토리는 ProfilePrism이 자동으로 감지합니다. 수동으로 확인하려면:")
+            Text("ProfilePrism automatically detects Chrome profile directories. To check manually:")
                 .font(.body)
 
             VStack(alignment: .leading, spacing: 4) {
-                Text("1. Chrome 주소창에 아래 주소를 입력합니다:")
+                Text("1. Enter the following URL in Chrome's address bar:")
                     .font(.body)
 
                 Text("chrome://version")
@@ -122,37 +122,37 @@ struct HelpView: View {
                     .background(Color.secondary.opacity(0.1))
                     .cornerRadius(4)
 
-                Text("2. \"프로필 경로\" 항목에서 마지막 폴더 이름이 프로필 디렉토리입니다.")
+                Text("2. The last folder name in the \"Profile Path\" field is the profile directory.")
                     .font(.body)
 
-                Text("예: /Users/username/Library/Application Support/Google/Chrome/Profile 1")
+                Text("e.g. /Users/username/Library/Application Support/Google/Chrome/Profile 1")
                     .font(.system(.body, design: .monospaced))
                     .padding(8)
                     .background(Color.secondary.opacity(0.1))
                     .cornerRadius(4)
 
-                Text("위 경로에서 \"Profile 1\"이 프로필 디렉토리 이름입니다.")
+                Text("In the path above, \"Profile 1\" is the profile directory name.")
                     .font(.body)
                     .foregroundStyle(.secondary)
             }
         }
     }
 
-    // MARK: - Chrome 확장 프로그램
+    // MARK: - Chrome Extension
 
     private func chromeExtensionSection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Chrome 확장 프로그램")
+            Text("Chrome Extension")
                 .font(.headline)
 
-            Text("Chrome은 내부적으로 링크 클릭을 직접 처리하기 때문에, macOS 기본 브라우저 설정만으로는 Chrome 내부에서 클릭한 링크를 ProfilePrism으로 전달할 수 없습니다.")
+            Text("Chrome handles link clicks internally, so macOS default browser settings alone cannot redirect links clicked within Chrome to ProfilePrism.")
                 .font(.body)
 
-            Text("확장 프로그램이 필요한 이유")
+            Text("Why the Extension is Needed")
                 .font(.subheadline)
                 .bold()
 
-            Text("Chrome 확장 프로그램은 Chrome 내부에서 클릭한 링크를 가로채어 profileprism:// 스킴을 통해 ProfilePrism으로 전달합니다.")
+            Text("The Chrome extension intercepts links clicked within Chrome and forwards them to ProfilePrism via the profileprism:// scheme.")
                 .font(.body)
 
             Text("profileprism://route?url=<encoded_url>")
@@ -161,18 +161,18 @@ struct HelpView: View {
                 .background(Color.secondary.opacity(0.1))
                 .cornerRadius(4)
 
-            Text("설치 방법")
+            Text("Installation")
                 .font(.subheadline)
                 .bold()
 
             VStack(alignment: .leading, spacing: 4) {
-                Text("1. Chrome에서 chrome://extensions 페이지를 엽니다.")
+                Text("1. Open chrome://extensions in Chrome.")
                     .font(.body)
-                Text("2. \"개발자 모드\"를 활성화합니다.")
+                Text("2. Enable \"Developer mode\".")
                     .font(.body)
-                Text("3. \"압축해제된 확장 프로그램을 로드합니다\" 버튼을 클릭합니다.")
+                Text("3. Click \"Load unpacked\".")
                     .font(.body)
-                Text("4. ProfilePrism 확장 프로그램 폴더를 선택합니다.")
+                Text("4. Select the ProfilePrism extension folder.")
                     .font(.body)
             }
         }

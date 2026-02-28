@@ -8,9 +8,8 @@ struct ProfilePickerView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            // 헤더: URL 표시
             VStack(spacing: 4) {
-                Text("프로필 선택")
+                Text("Select Profile")
                     .font(.headline)
                 Text(url.host ?? url.absoluteString)
                     .font(.caption)
@@ -24,7 +23,6 @@ struct ProfilePickerView: View {
 
             Divider()
 
-            // 프로필 목록
             ScrollView {
                 VStack(spacing: 2) {
                     ForEach(profiles) { profile in
@@ -57,7 +55,7 @@ struct ProfilePickerView: View {
                         .buttonStyle(.plain)
                         .background(
                             RoundedRectangle(cornerRadius: 6)
-                                .fill(.primary.opacity(0.00001)) // hover 영역
+                                .fill(.primary.opacity(0.00001))
                         )
                         .onHover { hovering in
                             if hovering {
@@ -73,10 +71,9 @@ struct ProfilePickerView: View {
 
             Divider()
 
-            // 취소
             HStack {
                 Spacer()
-                Button("취소") { onCancel() }
+                Button("Cancel") { onCancel() }
                     .keyboardShortcut(.escape, modifiers: [])
             }
             .padding(.horizontal, 12)

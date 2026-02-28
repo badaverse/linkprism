@@ -5,7 +5,7 @@ struct ProfilePrismApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
-        Window("Profile Router 설정", id: "settings") {
+        Window("Profile Router Settings", id: "settings") {
             ContentView()
                 .environmentObject(ConfigManager.shared)
                 .onOpenURL { url in

@@ -36,10 +36,10 @@
 <body>
   <h2>Profile Router</h2>
 
-  <label>라우팅할 도메인</label>
-  <div class="hint">줄바꿈으로 구분. 이 도메인의 링크를 클릭하면 ProfilePrism 앱으로 라우팅됩니다.</div>
+  <label data-i18n="domainsLabel">Domains to Route</label>
+  <div class="hint" data-i18n="domainsHint">One per line. Links to these domains will be routed through the ProfilePrism app.</div>
   <textarea id="domains" placeholder="example.com&#10;company.slack.com&#10;jira.atlassian.net"></textarea>
-  <div class="saved" id="saved">저장됨</div>
+  <div class="saved" id="saved" data-i18n="saved">Saved</div>
 
   <script src="popup.js"></script>
 </body>

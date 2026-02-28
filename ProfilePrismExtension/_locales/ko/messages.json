@@ -1,0 +1,17 @@
+{
+  "appName": {
+    "message": "Profile Router"
+  },
+  "appDescription": {
+    "message": "Chrome 링크를 ProfilePrism 앱을 통해 올바른 프로필로 라우팅합니다"
+  },
+  "domainsLabel": {
+    "message": "라우팅할 도메인"
+  },
+  "domainsHint": {
+    "message": "줄바꿈으로 구분. 이 도메인의 링크를 클릭하면 ProfilePrism 앱으로 라우팅됩니다."
+  },
+  "saved": {
+    "message": "저장됨"
+  }
+}

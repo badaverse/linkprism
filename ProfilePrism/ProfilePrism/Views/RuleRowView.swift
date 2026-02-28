@@ -5,7 +5,6 @@ struct RuleRowView: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            // 패턴 타입 아이콘
             Image(systemName: rule.patternType == .host ? "globe" : "chevron.left.forwardslash.chevron.right")
                 .foregroundStyle(.secondary)
                 .frame(width: 18)
@@ -22,7 +21,7 @@ struct RuleRowView: View {
             Spacer()
 
             if rule.shouldAsk {
-                Text("물어보기")
+                Text("Ask")
                     .font(.caption)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 3)

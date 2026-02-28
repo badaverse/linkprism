@@ -23,7 +23,7 @@ struct ContentView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text("Profile Router")
                     .font(.title3.bold())
-                Text("위에서부터 순서대로 매칭되며, 첫 번째 일치 규칙이 사용됩니다.")
+                Text("Rules are matched in order from top. The first match is used.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
@@ -41,13 +41,13 @@ struct ContentView: View {
                 RuleRowView(rule: rule)
                     .tag(rule.id)
                     .contextMenu {
-                        Button("편집") { editingRule = rule }
-                        Toggle("활성화", isOn: Binding(
+                        Button("Edit") { editingRule = rule }
+                        Toggle("Enabled", isOn: Binding(
                             get: { rule.isEnabled },
                             set: { newValue in toggleEnabled(rule: rule, to: newValue) }
                         ))
                         Divider()
-                        Button("삭제", role: .destructive) { delete(rule: rule) }
+                        Button("Delete", role: .destructive) { delete(rule: rule) }
                     }
             }
             .onMove { config.rules.move(fromOffsets: $0, toOffset: $1); config.save() }
@@ -74,21 +74,19 @@ struct ContentView: View {
 
     private var footer: some View {
         HStack(spacing: 4) {
-            // + / - 버튼
             Button(action: { showingAddRule = true }) {
                 Image(systemName: "plus")
             }
             .buttonStyle(.plain)
-            .help("규칙 추가")
+            .help("Add Rule")
 
             Button(action: deleteSelected) {
                 Image(systemName: "minus")
             }
             .buttonStyle(.plain)
             .disabled(selectedRuleID == nil)
-            .help("선택한 규칙 삭제")
+            .help("Delete Selected Rule")
 
-            // 편집 버튼
             Button(action: {
                 editingRule = config.rules.first { $0.id == selectedRuleID }
             }) {
@@ -96,7 +94,7 @@ struct ContentView: View {
             }
             .buttonStyle(.plain)
             .disabled(selectedRuleID == nil)
-            .help("선택한 규칙 편집")
+            .help("Edit Selected Rule")
 
             Spacer()
         }

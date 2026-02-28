@@ -8,15 +8,15 @@ struct DebugView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("URL 라우팅 테스트")
+            Text("URL Routing Test")
                 .font(.headline)
 
             HStack {
-                TextField("URL 입력", text: $urlString)
+                TextField("Enter URL", text: $urlString)
                     .textFieldStyle(.roundedBorder)
                     .onSubmit { test() }
 
-                Button("테스트") { test() }
+                Button("Test") { test() }
                     .keyboardShortcut(.return, modifiers: [])
             }
 
@@ -26,11 +26,11 @@ struct DebugView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     row("URL", r.url)
                     row("Host", r.host)
-                    row("매칭 규칙", r.matchedRule ?? "없음")
-                    row("결과", r.action)
+                    row(String(localized: "Matched Rule"), r.matchedRule ?? String(localized: "None"))
+                    row(String(localized: "Result"), r.action)
 
                     if let profile = r.profile {
-                        row("프로필", profile)
+                        row(String(localized: "Profile"), profile)
                     }
                 }
                 .font(.callout)
@@ -39,7 +39,7 @@ struct DebugView: View {
 
                 HStack {
                     Spacer()
-                    Button("실제로 열기") {
+                    Button("Open in Browser") {
                         guard let url = URL(string: urlString) else { return }
                         let routeResult = Router.resolve(url: url, rules: config.rules)
                         switch routeResult {
@@ -75,7 +75,7 @@ struct DebugView: View {
                 url: urlString,
                 host: "-",
                 matchedRule: nil,
-                action: "잘못된 URL",
+                action: String(localized: "Invalid URL"),
                 profile: nil
             )
             return
@@ -84,7 +84,6 @@ struct DebugView: View {
         let host = url.host ?? ""
         let routeResult = Router.resolve(url: url, rules: config.rules)
 
-        // 매칭된 규칙 찾기
         var matchedPattern: String?
         for rule in config.rules where rule.isEnabled {
             if matchesRule(host: host, rule: rule) {
@@ -97,12 +96,12 @@ struct DebugView: View {
         var profile: String?
         switch routeResult {
         case .open(let p):
-            action = "프로필로 열기"
+            action = String(localized: "Open in Profile")
             profile = p
         case .ask:
-            action = "물어보기"
+            action = String(localized: "Ask")
         case .none:
-            action = "기본 Chrome (매칭 없음)"
+            action = String(localized: "Default Chrome (No Match)")
         }
 
         result = DebugResult(
