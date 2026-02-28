@@ -205,6 +205,7 @@
       }
     },
     "Click \"Load unpacked\"" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ko" : {
           "stringUnit" : {
@@ -365,6 +366,7 @@
       }
     },
     "Enable \"Developer mode\"" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ko" : {
           "stringUnit" : {
@@ -610,6 +612,64 @@
         }
       }
     },
+    "LinkPrism" : {
+
+    },
+    "LinkPrism %@ is available for download.\n\n%@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism %@ 버전을 다운로드할 수 있습니다.\n\n%@"
+          }
+        }
+      }
+    },
+    "LinkPrism Help" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism 도움말"
+          }
+        }
+      }
+    },
+    "LinkPrism is\nrunning in the menu bar" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism가\n메뉴바에서 실행 중입니다"
+          }
+        }
+      }
+    },
+    "LinkPrism needs to be set as the\ndefault web browser to receive URLs." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism이 URL을 받으려면\n기본 웹 브라우저로 설정해야 합니다."
+          }
+        }
+      }
+    },
+    "LinkPrism Settings" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkPrism 설정"
+          }
+        }
+      }
+    },
+    "linkprism://route?url=<encoded_url>" : {
+
+    },
     "Links clicked inside Chrome bypass the default\nbrowser, so LinkPrism can't intercept them.\nInstall the extension to solve this." : {
       "localizations" : {
         "ko" : {
@@ -734,6 +794,7 @@
       }
     },
     "Open chrome://extensions in Chrome" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ko" : {
           "stringUnit" : {
@@ -802,64 +863,6 @@
           }
         }
       }
-    },
-    "LinkPrism" : {
-
-    },
-    "LinkPrism %@ is available for download.\n\n%@" : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "LinkPrism %@ 버전을 다운로드할 수 있습니다.\n\n%@"
-          }
-        }
-      }
-    },
-    "LinkPrism Help" : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "LinkPrism 도움말"
-          }
-        }
-      }
-    },
-    "LinkPrism is\nrunning in the menu bar" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "LinkPrism가\n메뉴바에서 실행 중입니다"
-          }
-        }
-      }
-    },
-    "LinkPrism needs to be set as the\ndefault web browser to receive URLs." : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "LinkPrism이 URL을 받으려면\n기본 웹 브라우저로 설정해야 합니다."
-          }
-        }
-      }
-    },
-    "LinkPrism Settings" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "LinkPrism 설정"
-          }
-        }
-      }
-    },
-    "linkprism://route?url=<encoded_url>" : {
-
     },
     "Quit" : {
       "localizations" : {
@@ -994,6 +997,7 @@
       }
     },
     "Select the LinkPrismExtension folder" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ko" : {
           "stringUnit" : {
@@ -1114,6 +1118,16 @@
         }
       }
     },
+    "Unzip the downloaded file" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다운로드한 파일 압축 해제"
+          }
+        }
+      }
+    },
     "Update Available" : {
       "localizations" : {
         "ko" : {
@@ -1170,16 +1184,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "*를 사용하여 서브도메인을 포함한 매칭이 가능합니다."
-          }
-        }
-      }
-    },
-    "Unzip the downloaded file" : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "다운로드한 파일 압축 해제"
           }
         }
       }
@@ -1250,22 +1254,23 @@
         }
       }
     },
-    "You can install the extension later." : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "확장 프로그램은 나중에 설치해도 됩니다."
-          }
-        }
-      }
-    },
     "You can install the extension later from the Help page." : {
       "localizations" : {
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "확장 프로그램은 나중에 도움말 페이지에서 설치할 수 있습니다."
+          }
+        }
+      }
+    },
+    "You can install the extension later." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확장 프로그램은 나중에 설치해도 됩니다."
           }
         }
       }
