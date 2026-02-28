@@ -2,7 +2,6 @@ import SwiftUI
 
 enum SettingsTab: String, CaseIterable, Identifiable {
     case routing
-    case remembered
     case about
 
     var id: String { rawValue }
@@ -10,7 +9,6 @@ enum SettingsTab: String, CaseIterable, Identifiable {
     var label: String {
         switch self {
         case .routing: String(localized: "Routing")
-        case .remembered: String(localized: "Remembered")
         case .about: String(localized: "About")
         }
     }
@@ -18,7 +16,6 @@ enum SettingsTab: String, CaseIterable, Identifiable {
     var icon: String {
         switch self {
         case .routing: "arrow.triangle.branch"
-        case .remembered: "clock.arrow.circlepath"
         case .about: "info.circle"
         }
     }
@@ -41,8 +38,6 @@ struct SettingsView: View {
             case .routing:
                 ContentView()
                     .environmentObject(config)
-            case .remembered:
-                RememberedURLsView()
             case .about:
                 AboutView()
             }

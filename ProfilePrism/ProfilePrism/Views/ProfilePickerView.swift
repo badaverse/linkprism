@@ -13,7 +13,7 @@ struct ProfilePickerView: View {
             VStack(spacing: 4) {
                 Text("Select Profile")
                     .font(.headline)
-                Text(url.host ?? url.absoluteString)
+                Text(RememberedRouteManager.normalize(url: url))
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
@@ -74,7 +74,7 @@ struct ProfilePickerView: View {
             Divider()
 
             HStack {
-                Toggle("Remember this URL", isOn: $rememberChoice)
+                Toggle("Don't ask again for this URL", isOn: $rememberChoice)
                     .toggleStyle(.checkbox)
                     .font(.caption)
                 Spacer()

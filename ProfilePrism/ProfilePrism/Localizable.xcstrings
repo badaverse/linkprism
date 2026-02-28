@@ -249,6 +249,16 @@
         }
       }
     },
+    "Don't ask again for this URL" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 URL은 다음부터 묻지 않기"
+          }
+        }
+      }
+    },
     "Download" : {
       "localizations" : {
         "ko" : {
@@ -548,6 +558,16 @@
         }
       }
     },
+    "No remembered URLs for this rule." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 규칙에 기억된 URL이 없습니다."
+          }
+        }
+      }
+    },
     "No remembered URLs yet." : {
       "localizations" : {
         "ko" : {
@@ -746,17 +766,8 @@
         }
       }
     },
-    "Remember this URL" : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이 URL 기억하기"
-          }
-        }
-      }
-    },
     "Remembered" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ko" : {
           "stringUnit" : {
@@ -791,6 +802,17 @@
     },
     "Routing Rules" : {
 
+    },
+    "Rules" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙"
+          }
+        }
+      }
     },
     "Rules are evaluated from top to bottom. The first matching rule is applied." : {
       "localizations" : {
@@ -1022,12 +1044,12 @@
         }
       }
     },
-    "When you select a profile and check \"Remember this URL\", it will appear here." : {
+    "When you select a profile and check \"Don't ask again for this URL\", it will appear here." : {
       "localizations" : {
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "프로필을 선택할 때 \"이 URL 기억하기\"를 체크하면 여기에 표시됩니다."
+            "value" : "프로필을 선택할 때 \"이 URL은 다음부터 묻지 않기\"를 체크하면 여기에 표시됩니다."
           }
         }
       }

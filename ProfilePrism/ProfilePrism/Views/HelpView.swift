@@ -10,8 +10,6 @@ struct HelpView: View {
                 Divider()
                 askFeatureSection()
                 Divider()
-                chromeProfileDirectorySection()
-                Divider()
                 chromeExtensionSection()
             }
             .padding(24)
@@ -68,20 +66,20 @@ struct HelpView: View {
             Text("Regex Pattern")
                 .font(.headline)
 
-            Text("Supports regex patterns using NSRegularExpression. Regex is matched against the hostname only.")
+            Text("Supports regex patterns using NSRegularExpression. Regex is matched against the full URL.")
                 .font(.body)
 
             Text("Example:")
                 .font(.body)
                 .bold()
 
-            Text(".*\\.corp\\.example\\.com")
+            Text("github\\.com/my-org/.*")
                 .font(.system(.body, design: .monospaced))
                 .padding(8)
                 .background(Color.secondary.opacity(0.1))
                 .cornerRadius(4)
 
-            Text("This pattern matches all subdomains of corp.example.com.")
+            Text("This pattern matches all repositories under the my-org organization on GitHub.")
                 .font(.body)
                 .foregroundStyle(.secondary)
         }
@@ -99,42 +97,6 @@ struct HelpView: View {
 
             Text("This is useful for domains used in multiple contexts (e.g., GitHub, Google Docs). You can choose which profile to use each time.")
                 .font(.body)
-        }
-    }
-
-    // MARK: - Finding Chrome Profile Directory
-
-    private func chromeProfileDirectorySection() -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Finding Chrome Profile Directory")
-                .font(.headline)
-
-            Text("ProfilePrism automatically detects Chrome profile directories. To check manually:")
-                .font(.body)
-
-            VStack(alignment: .leading, spacing: 4) {
-                Text("1. Enter the following URL in Chrome's address bar:")
-                    .font(.body)
-
-                Text("chrome://version")
-                    .font(.system(.body, design: .monospaced))
-                    .padding(8)
-                    .background(Color.secondary.opacity(0.1))
-                    .cornerRadius(4)
-
-                Text("2. The last folder name in the \"Profile Path\" field is the profile directory.")
-                    .font(.body)
-
-                Text("e.g. /Users/username/Library/Application Support/Google/Chrome/Profile 1")
-                    .font(.system(.body, design: .monospaced))
-                    .padding(8)
-                    .background(Color.secondary.opacity(0.1))
-                    .cornerRadius(4)
-
-                Text("In the path above, \"Profile 1\" is the profile directory name.")
-                    .font(.body)
-                    .foregroundStyle(.secondary)
-            }
         }
     }
 

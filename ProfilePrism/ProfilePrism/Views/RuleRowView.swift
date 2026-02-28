@@ -2,6 +2,7 @@ import SwiftUI
 
 struct RuleRowView: View {
     let rule: Rule
+    var profileDisplayName: String?
 
     var body: some View {
         HStack(spacing: 10) {
@@ -21,7 +22,7 @@ struct RuleRowView: View {
             Spacer()
 
             if rule.shouldAsk {
-                Text("Ask")
+                Text(String(localized: "Ask"))
                     .font(.caption)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 3)
@@ -29,7 +30,7 @@ struct RuleRowView: View {
                     .foregroundStyle(.orange)
                     .clipShape(Capsule())
             } else {
-                Text(rule.chromeProfile)
+                Text(profileDisplayName ?? rule.chromeProfile)
                     .font(.caption)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 3)

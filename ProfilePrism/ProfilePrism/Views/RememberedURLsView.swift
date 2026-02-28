@@ -47,7 +47,7 @@ struct RememberedURLsView: View {
                     Spacer()
                     Text(String(localized: "No remembered URLs yet."))
                         .foregroundStyle(.secondary)
-                    Text(String(localized: "When you select a profile and check \"Remember this URL\", it will appear here."))
+                    Text(String(localized: "When you select a profile and check \"Don't ask again for this URL\", it will appear here."))
                         .font(.caption)
                         .foregroundStyle(.tertiary)
                         .multilineTextAlignment(.center)
