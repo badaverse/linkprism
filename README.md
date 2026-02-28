@@ -17,13 +17,13 @@
 
 A macOS menu bar app that puts an end to the daily annoyance of opening URLs in the wrong Chrome profile. Set up domain rules once — `notion.so` goes to Work, `github.com` goes to Personal — and every link you click just opens in the right place. Paired with a Chrome extension that catches even in-browser clicks, LinkPrism routes them seamlessly. No more copy-paste gymnastics. Just click and go.
 
-<!-- Screenshots coming soon
 <div align="center">
-  <img src="assets/screenshot-settings.png" width="600" alt="Settings window">
+  <img src="assets/screenshots/app-routing-rules.png" width="600" alt="Routing Rules settings">
   <br><br>
-  <img src="assets/screenshot-picker.png" width="320" alt="Profile picker">
+  <img src="assets/screenshots/select-profile.png" width="320" alt="Profile picker popup">
+  <br><br>
+  <img src="assets/screenshots/app-menu.png" width="320" alt="Menu bar dropdown">
 </div>
--->
 
 ## Installation
 

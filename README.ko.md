@@ -17,13 +17,13 @@
 
 매번 잘못된 Chrome 프로필에서 URL이 열리는 불편함, 이제 끝. 도메인 규칙을 한 번만 설정하면 — `notion.so`는 회사, `github.com`은 개인 — 클릭하는 모든 링크가 알아서 제 자리를 찾아갑니다. Chrome 확장과 함께라면 브라우저 안에서 클릭한 링크까지 놓치지 않습니다. 복사-붙여넣기 없이, 클릭 한 번이면 됩니다.
 
-<!-- Screenshots coming soon
 <div align="center">
-  <img src="assets/screenshot-settings.png" width="600" alt="설정 화면">
+  <img src="assets/screenshots/app-routing-rules.png" width="600" alt="라우팅 규칙 설정">
   <br><br>
-  <img src="assets/screenshot-picker.png" width="320" alt="프로필 선택">
+  <img src="assets/screenshots/select-profile.png" width="320" alt="프로필 선택 팝업">
+  <br><br>
+  <img src="assets/screenshots/app-menu.png" width="320" alt="메뉴바 드롭다운">
 </div>
--->
 
 ## 설치
 
