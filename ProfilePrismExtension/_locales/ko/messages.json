@@ -3,15 +3,30 @@
     "message": "ProfilePrism"
   },
   "appDescription": {
-    "message": "Chrome 링크를 ProfilePrism 앱을 통해 올바른 프로필로 라우팅합니다"
+    "message": "Chrome 프로필 전환은 그만. 링크가 알아서 제 자리를 찾아갑니다."
   },
-  "domainsLabel": {
-    "message": "라우팅할 도메인"
+  "popupDescription": {
+    "message": "규칙에 매칭되는 링크가 ProfilePrism macOS 앱을 통해 라우팅됩니다."
   },
-  "domainsHint": {
-    "message": "줄바꿈으로 구분. 이 도메인의 링크를 클릭하면 ProfilePrism 앱으로 라우팅됩니다."
+  "appConnected": {
+    "message": "ProfilePrism 연결됨"
   },
-  "saved": {
-    "message": "저장됨"
+  "appDisconnected": {
+    "message": "ProfilePrism 앱이 실행 중이 아닙니다"
+  },
+  "detectedProfile": {
+    "message": "현재 프로필"
+  },
+  "refreshRules": {
+    "message": "규칙 새로고침"
+  },
+  "downloadApp": {
+    "message": "macOS 앱 다운로드"
+  },
+  "selectProfile": {
+    "message": "프로필을 선택하세요"
+  },
+  "viewOnGithub": {
+    "message": "GitHub에서 보기"
   }
 }

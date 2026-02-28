@@ -4,19 +4,39 @@
     "description": "Extension name"
   },
   "appDescription": {
-    "message": "Routes Chrome links to the correct profile via ProfilePrism app",
+    "message": "Stop juggling Chrome profiles. Let your links find their way home.",
     "description": "Extension description"
   },
-  "domainsLabel": {
-    "message": "Domains to Route",
-    "description": "Label above the domain textarea"
+  "popupDescription": {
+    "message": "Links matching your rules are routed through the ProfilePrism macOS app.",
+    "description": "Description shown in the popup"
   },
-  "domainsHint": {
-    "message": "One per line. Links to these domains will be routed through the ProfilePrism app.",
-    "description": "Help text for domains"
+  "appConnected": {
+    "message": "Connected to ProfilePrism",
+    "description": "Status when app is running"
   },
-  "saved": {
-    "message": "Saved",
-    "description": "Confirmation after saving"
+  "appDisconnected": {
+    "message": "ProfilePrism app is not running",
+    "description": "Status when app is not running"
+  },
+  "detectedProfile": {
+    "message": "Current profile",
+    "description": "Label for detected profile name"
+  },
+  "refreshRules": {
+    "message": "Refresh rules",
+    "description": "Button to manually refresh rules from macOS app"
+  },
+  "downloadApp": {
+    "message": "Download macOS App",
+    "description": "Link to download the macOS app"
+  },
+  "selectProfile": {
+    "message": "Select your profile",
+    "description": "Heading for profile selector when auto-detect fails"
+  },
+  "viewOnGithub": {
+    "message": "View on GitHub",
+    "description": "Link to the GitHub repository"
   }
 }
