@@ -23,7 +23,7 @@ final class URLRouter {
         lastHandled = (url.absoluteString, now)
 
         let targetURL: URL
-        if url.scheme == "profilerouter",
+        if url.scheme == "profileprism",
            let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
            let encoded = components.queryItems?.first(where: { $0.name == "url" })?.value,
            let decoded = URL(string: encoded) {
