@@ -6,7 +6,7 @@ struct ProfilePickerView: View {
     let onSelect: (String, Bool) -> Void
     let onCancel: () -> Void
 
-    @State private var rememberChoice = true
+    @State private var rememberChoice = false
 
     var body: some View {
         VStack(spacing: 0) {
