@@ -41,15 +41,7 @@ struct DebugView: View {
                     Spacer()
                     Button("Open in Browser") {
                         guard let url = URL(string: urlString) else { return }
-                        let routeResult = Router.resolve(url: url, rules: config.rules)
-                        switch routeResult {
-                        case .open(let profile):
-                            Router.openInChrome(url: url, profile: profile)
-                        case .ask:
-                            Router.openInChrome(url: url, profile: nil)
-                        case .none:
-                            Router.openInChrome(url: url, profile: nil)
-                        }
+                        (NSApp.delegate as? AppDelegate)?.routeURL(url)
                     }
                     .buttonStyle(.borderedProminent)
                 }
