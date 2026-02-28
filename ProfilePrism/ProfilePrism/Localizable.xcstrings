@@ -134,6 +134,7 @@
       }
     },
     "Automatically routes URLs to the right\nChrome profile based on domain rules." : {
+      "extractionState" : "stale",
       "localizations" : {
         "ko" : {
           "stringUnit" : {
@@ -149,36 +150,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "취소"
-          }
-        }
-      }
-    },
-    "Export Failed" : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "내보내기 실패"
-          }
-        }
-      }
-    },
-    "Export Rules" : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "규칙 내보내기"
-          }
-        }
-      }
-    },
-    "Export Rules…" : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "규칙 내보내기…"
           }
         }
       }
@@ -239,6 +210,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "\"압축해제된 확장 프로그램을 로드합니다\" 클릭"
+          }
+        }
+      }
+    },
+    "Click \"Load unpacked\" and select the unzipped folder" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"압축해제된 확장 프로그램을 로드합니다\"를 클릭하고 압축 해제한 폴더를 선택"
           }
         }
       }
@@ -309,6 +290,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다운로드"
+          }
+        }
+      }
+    },
+    "Download the extension zip from GitHub Releases" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub Releases에서 확장 프로그램 zip 다운로드"
           }
         }
       }
@@ -433,6 +424,36 @@
         }
       }
     },
+    "Export Failed" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내보내기 실패"
+          }
+        }
+      }
+    },
+    "Export Rules" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 내보내기"
+          }
+        }
+      }
+    },
+    "Export Rules…" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 내보내기…"
+          }
+        }
+      }
+    },
     "Get Started" : {
       "localizations" : {
         "ko" : {
@@ -465,6 +486,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "도움말"
+          }
+        }
+      }
+    },
+    "Host" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트"
+          }
+        }
+      }
+    },
+    "Host Pattern Matching" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트 패턴 매칭"
+          }
+        }
+      }
+    },
+    "Host, wildcard, and regex pattern support" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호스트, 와일드카드, 정규식 패턴 지원"
           }
         }
       }
@@ -515,36 +566,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "규칙 가져오기…"
-          }
-        }
-      }
-    },
-    "Host" : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "호스트"
-          }
-        }
-      }
-    },
-    "Host Pattern Matching" : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "호스트 패턴 매칭"
-          }
-        }
-      }
-    },
-    "Host, wildcard, and regex pattern support" : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "호스트, 와일드카드, 정규식 패턴 지원"
           }
         }
       }
@@ -698,6 +719,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "확인"
+          }
+        }
+      }
+    },
+    "Open chrome://extensions and enable \"Developer mode\"" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "chrome://extensions를 열고 \"개발자 모드\" 활성화"
           }
         }
       }
@@ -992,6 +1023,17 @@
         }
       }
     },
+    "Stop juggling Chrome profiles.\nLet your links find their way home." : {
+      "comment" : "App tagline in About view",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chrome 프로필 사이에서 헤매지 마세요.\n링크가 알아서 제자리를 찾아갑니다."
+          }
+        }
+      }
+    },
     "Supports regex patterns using NSRegularExpression. Regex is matched against the full URL." : {
       "localizations" : {
         "ko" : {
@@ -1022,22 +1064,22 @@
         }
       }
     },
-    "The file could not be read. It may be corrupted or in an unsupported format." : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "파일을 읽을 수 없습니다. 파일이 손상되었거나 지원하지 않는 형식일 수 있습니다."
-          }
-        }
-      }
-    },
     "The Chrome extension intercepts links clicked within Chrome and forwards them to ProfilePrism via the profileprism:// scheme." : {
       "localizations" : {
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chrome 확장 프로그램은 Chrome 내부에서 클릭한 링크를 가로채어 profileprism:// 스킴을 통해 ProfilePrism으로 전달합니다."
+          }
+        }
+      }
+    },
+    "The file could not be read. It may be corrupted or in an unsupported format." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파일을 읽을 수 없습니다. 파일이 손상되었거나 지원하지 않는 형식일 수 있습니다."
           }
         }
       }
@@ -1132,6 +1174,16 @@
         }
       }
     },
+    "Unzip the downloaded file" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다운로드한 파일 압축 해제"
+          }
+        }
+      }
+    },
     "Version %@ (%@)" : {
       "localizations" : {
         "en" : {
@@ -1198,28 +1250,22 @@
         }
       }
     },
-    "Your existing %lld rules will be replaced with %lld imported rules. This cannot be undone." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Your existing %1$lld rules will be replaced with %2$lld imported rules. This cannot be undone."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "기존 규칙 %1$lld개가 가져온 규칙 %2$lld개로 교체됩니다. 이 작업은 되돌릴 수 없습니다."
-          }
-        }
-      }
-    },
     "You can install the extension later." : {
       "localizations" : {
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "확장 프로그램은 나중에 설치해도 됩니다."
+          }
+        }
+      }
+    },
+    "You can install the extension later from the Help page." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확장 프로그램은 나중에 도움말 페이지에서 설치할 수 있습니다."
           }
         }
       }
@@ -1240,6 +1286,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "최신 버전입니다"
+          }
+        }
+      }
+    },
+    "Your existing %lld rules will be replaced with %lld imported rules. This cannot be undone." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Your existing %1$lld rules will be replaced with %2$lld imported rules. This cannot be undone."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기존 규칙 %1$lld개가 가져온 규칙 %2$lld개로 교체됩니다. 이 작업은 되돌릴 수 없습니다."
           }
         }
       }

@@ -28,7 +28,7 @@ struct AboutView: View {
                     .foregroundStyle(.secondary)
             }
 
-            Text("Stop juggling Chrome profiles.\nLet your links find their way home.")
+            Text("Stop juggling Chrome profiles.\nLet your links find their way home.", comment: "App tagline in About view")
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)

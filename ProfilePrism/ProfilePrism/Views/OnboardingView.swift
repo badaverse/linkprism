@@ -43,7 +43,7 @@ struct OnboardingView: View {
             .padding(.horizontal, 24)
             .padding(.vertical, 16)
         }
-        .frame(width: 480, height: 380)
+        .frame(width: 480, height: 440)
     }
 
     private var step1Introduction: some View {
@@ -101,14 +101,14 @@ struct OnboardingView: View {
                 .foregroundStyle(.secondary)
                 .font(.callout)
             VStack(alignment: .leading, spacing: 8) {
-                stepRow(number: 1, text: String(localized: "Open chrome://extensions in Chrome"))
-                stepRow(number: 2, text: String(localized: "Enable \"Developer mode\""))
-                stepRow(number: 3, text: String(localized: "Click \"Load unpacked\""))
-                stepRow(number: 4, text: String(localized: "Select the ProfilePrismExtension folder"))
+                stepRow(number: 1, text: String(localized: "Download the extension zip from GitHub Releases"))
+                stepRow(number: 2, text: String(localized: "Unzip the downloaded file"))
+                stepRow(number: 3, text: String(localized: "Open chrome://extensions and enable \"Developer mode\""))
+                stepRow(number: 4, text: String(localized: "Click \"Load unpacked\" and select the unzipped folder"))
             }
             .padding(12)
             .background(RoundedRectangle(cornerRadius: 8).fill(.secondary.opacity(0.08)))
-            Text("You can install the extension later.")
+            Text("You can install the extension later from the Help page.")
                 .font(.caption)
                 .foregroundStyle(.tertiary)
         }
