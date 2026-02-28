@@ -19,6 +19,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Start local HTTP server for Chrome extension
+        RulesServer.shared.start()
+
         // First-run onboarding
         if !UserDefaults.standard.bool(forKey: "didShowWelcome") {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
