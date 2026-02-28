@@ -7,6 +7,9 @@ final class URLRouter {
     /// Set by routeURL when result is .ask — AppDelegate observes this to show the picker panel.
     var pendingPickerURL: URL?
 
+    /// The rule ID associated with the pending picker request.
+    var pendingRuleID: UUID?
+
     /// Dedup: last handled URL
     private var lastHandled: (url: String, time: Date)?
 
@@ -35,11 +38,12 @@ final class URLRouter {
         switch result {
         case .open(let profile):
             Router.openInChrome(url: targetURL, profile: profile)
-        case .ask:
+        case .ask(let ruleID):
             if let rememberedProfile = RememberedRouteManager.shared.lookup(url: targetURL) {
                 Router.openInChrome(url: targetURL, profile: rememberedProfile)
             } else {
                 pendingPickerURL = targetURL
+                pendingRuleID = ruleID
             }
         case .none:
             Router.openInChrome(url: targetURL, profile: nil)

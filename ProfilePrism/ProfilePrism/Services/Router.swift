@@ -3,7 +3,7 @@ import AppKit
 
 enum RouteResult {
     case open(profile: String)   // 특정 프로필로 바로 열기
-    case ask                     // 사용자에게 프로필 선택 요청
+    case ask(ruleID: UUID)       // 사용자에게 프로필 선택 요청
     case none                    // 매칭 없음 → Chrome 기본 동작
 }
 
@@ -11,11 +11,12 @@ enum Router {
     /// URL을 규칙과 대조하여 라우팅 결과를 반환합니다.
     static func resolve(url: URL, rules: [Rule]) -> RouteResult {
         let host = url.host ?? ""
+        let fullURL = url.absoluteString
 
         for rule in rules where rule.isEnabled {
-            if matches(host: host, rule: rule) {
+            if matches(host: host, fullURL: fullURL, rule: rule) {
                 if rule.shouldAsk {
-                    return .ask
+                    return .ask(ruleID: rule.id)
                 }
                 return .open(profile: rule.chromeProfile)
             }
@@ -39,7 +40,7 @@ enum Router {
 
     // MARK: - Private
 
-    private static func matches(host: String, rule: Rule) -> Bool {
+    private static func matches(host: String, fullURL: String, rule: Rule) -> Bool {
         switch rule.patternType {
         case .host:
             if rule.pattern.hasPrefix("*.") {
@@ -50,8 +51,8 @@ enum Router {
 
         case .regex:
             guard let regex = try? NSRegularExpression(pattern: rule.pattern) else { return false }
-            let range = NSRange(host.startIndex..., in: host)
-            return regex.firstMatch(in: host, range: range) != nil
+            let range = NSRange(fullURL.startIndex..., in: fullURL)
+            return regex.firstMatch(in: fullURL, range: range) != nil
         }
     }
 }

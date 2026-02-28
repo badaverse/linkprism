@@ -29,14 +29,16 @@ final class RememberedRouteManager: ObservableObject {
         return entries.first(where: { $0.normalizedURL == key })?.chromeProfile
     }
 
-    func remember(url: URL, profile: String) {
+    func remember(url: URL, profile: String, ruleID: UUID) {
         let key = Self.normalize(url: url)
         // Update existing entry if present
         if let idx = entries.firstIndex(where: { $0.normalizedURL == key }) {
             entries[idx].chromeProfile = profile
+            entries[idx].ruleID = ruleID
             entries[idx].createdAt = Date()
         } else {
             entries.append(RememberedRoute(
+                ruleID: ruleID,
                 normalizedURL: key,
                 chromeProfile: profile,
                 createdAt: Date()
@@ -55,11 +57,16 @@ final class RememberedRouteManager: ObservableObject {
         save()
     }
 
-    // MARK: - URL Normalization
+    func entries(for ruleID: UUID) -> [RememberedRoute] {
+        entries.filter { $0.ruleID == ruleID }
+    }
 
-    private static let trailingSegments: Set<String> = [
-        "edit", "preview", "view", "copy"
-    ]
+    func forgetAll(for ruleID: UUID) {
+        entries.removeAll { $0.ruleID == ruleID }
+        save()
+    }
+
+    // MARK: - URL Normalization
 
     static func normalize(url: URL) -> String {
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
@@ -73,17 +80,6 @@ final class RememberedRouteManager: ObservableObject {
         var path = components.path
 
         // Remove trailing slash
-        while path.hasSuffix("/") {
-            path = String(path.dropLast())
-        }
-
-        // Remove known trailing segments (e.g. /edit, /preview)
-        let lastSegment = path.split(separator: "/").last.map(String.init) ?? ""
-        if trailingSegments.contains(lastSegment) {
-            path = String(path.prefix(upTo: path.index(path.endIndex, offsetBy: -(lastSegment.count + 1))))
-        }
-
-        // Remove trailing slash again after stripping segment
         while path.hasSuffix("/") {
             path = String(path.dropLast())
         }

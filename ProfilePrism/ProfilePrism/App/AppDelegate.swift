@@ -95,11 +95,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func handlePickerRequest() {
         guard let url = URLRouter.shared.pendingPickerURL else { return }
+        let ruleID = URLRouter.shared.pendingRuleID
         URLRouter.shared.pendingPickerURL = nil
-        showProfilePicker(for: url)
+        URLRouter.shared.pendingRuleID = nil
+        showProfilePicker(for: url, ruleID: ruleID)
     }
 
-    private func showProfilePicker(for url: URL) {
+    private func showProfilePicker(for url: URL, ruleID: UUID?) {
         pickerWindow?.close()
 
         let profiles = ChromeProfileScanner.scan()
@@ -112,8 +114,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             url: url,
             profiles: profiles,
             onSelect: { [weak self] profile, shouldRemember in
-                if shouldRemember {
-                    RememberedRouteManager.shared.remember(url: url, profile: profile)
+                if shouldRemember, let ruleID {
+                    RememberedRouteManager.shared.remember(url: url, profile: profile, ruleID: ruleID)
                 }
                 Router.openInChrome(url: url, profile: profile)
                 self?.pickerWindow?.close()
