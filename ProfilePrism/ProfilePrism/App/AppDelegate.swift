@@ -7,6 +7,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem!
     private var welcomePopover: NSPopover?
     private var pickerWindow: NSWindow?
+    private var helpWindow: NSWindow?
     #if DEBUG
     private var debugWindow: NSWindow?
     #endif
@@ -61,6 +62,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             action: #selector(openSettings),
             keyEquivalent: ","
         ))
+        menu.addItem(NSMenuItem(title: "도움말", action: #selector(openHelp), keyEquivalent: "?"))
         #if DEBUG
         menu.addItem(.separator())
         menu.addItem(NSMenuItem(
@@ -206,6 +208,27 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         else { return }
 
         routeURL(url)
+    }
+
+    // MARK: - 도움말
+
+    @objc private func openHelp() {
+        if let w = helpWindow {
+            w.makeKeyAndOrderFront(nil)
+            NSApp.activate()
+            return
+        }
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 520, height: 500),
+            styleMask: [.titled, .closable, .resizable],
+            backing: .buffered, defer: false
+        )
+        window.title = "ProfilePrism 도움말"
+        window.contentView = NSHostingView(rootView: HelpView())
+        window.center()
+        window.makeKeyAndOrderFront(nil)
+        NSApp.activate()
+        helpWindow = window
     }
 
     // MARK: - 디버그
