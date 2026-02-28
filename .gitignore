@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Build artifacts
+*.app
+ProfileRouter/ProfileRouter\ */
+
+# sources
+design-sources/
+docs/
+
+# Claude
+.claude/

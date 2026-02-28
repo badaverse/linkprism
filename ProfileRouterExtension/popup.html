@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 300px;
+      padding: 16px;
+      font: 13px -apple-system, sans-serif;
+      color: #222;
+    }
+    h2 { font-size: 15px; margin-bottom: 12px; }
+    label { display: block; font-weight: 600; margin-bottom: 4px; }
+    .hint { font-size: 11px; color: #888; margin-bottom: 8px; }
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font: 12px monospace;
+      resize: vertical;
+    }
+    textarea:focus { outline: none; border-color: #4A90D9; }
+    .saved {
+      font-size: 11px;
+      color: #4caf50;
+      margin-top: 4px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .saved.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <h2>Profile Router</h2>
+
+  <label>라우팅할 도메인</label>
+  <div class="hint">줄바꿈으로 구분. 이 도메인의 링크를 클릭하면 ProfileRouter 앱으로 라우팅됩니다.</div>
+  <textarea id="domains" placeholder="example.com&#10;company.slack.com&#10;jira.atlassian.net"></textarea>
+  <div class="saved" id="saved">저장됨</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
