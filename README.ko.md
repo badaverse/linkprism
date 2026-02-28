@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/platform-macOS_14+-lightgrey?style=flat-square" alt="Platform: macOS 14+">
   <img src="https://img.shields.io/badge/swift-5.9+-F05138?style=flat-square" alt="Swift 5.9+">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/badaverse/linkprism?style=flat-square" alt="MIT License"></a>
+  <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Fbadaverse%2Flinkprism&label=Hits&icon=github&color=%23198754&message=&style=flat&tz=Asia%2FSeoul">
 </div>
 
 <p align="center">
