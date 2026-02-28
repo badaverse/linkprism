@@ -63,6 +63,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             keyEquivalent: ","
         ))
         menu.addItem(NSMenuItem(title: "도움말", action: #selector(openHelp), keyEquivalent: "?"))
+        menu.addItem(NSMenuItem(title: "업데이트 확인", action: #selector(checkForUpdates), keyEquivalent: ""))
         #if DEBUG
         menu.addItem(.separator())
         menu.addItem(NSMenuItem(
@@ -229,6 +230,43 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         window.makeKeyAndOrderFront(nil)
         NSApp.activate()
         helpWindow = window
+    }
+
+    // MARK: - 업데이트
+
+    @objc private func checkForUpdates() {
+        Task { @MainActor in
+            let result = await UpdateChecker.check()
+            switch result {
+            case .upToDate:
+                let alert = NSAlert()
+                alert.messageText = "최신 버전입니다"
+                alert.informativeText = "현재 사용 중인 버전이 최신입니다."
+                alert.alertStyle = .informational
+                alert.addButton(withTitle: "확인")
+                alert.runModal()
+            case .updateAvailable(let release):
+                let alert = NSAlert()
+                alert.messageText = "새 버전이 있습니다"
+                let version = release.tagName.replacingOccurrences(of: "v", with: "")
+                alert.informativeText = "ProfilePrism \(version) 버전을 다운로드할 수 있습니다.\n\n\(release.body)"
+                alert.alertStyle = .informational
+                alert.addButton(withTitle: "다운로드")
+                alert.addButton(withTitle: "나중에")
+                if alert.runModal() == .alertFirstButtonReturn {
+                    if let url = UpdateChecker.dmgDownloadURL(from: release) {
+                        NSWorkspace.shared.open(url)
+                    }
+                }
+            case .error(let message):
+                let alert = NSAlert()
+                alert.messageText = "업데이트 확인 실패"
+                alert.informativeText = message
+                alert.alertStyle = .warning
+                alert.addButton(withTitle: "확인")
+                alert.runModal()
+            }
+        }
     }
 
     // MARK: - 디버그
