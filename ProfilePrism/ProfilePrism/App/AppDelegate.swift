@@ -5,7 +5,7 @@ import SwiftUI
 final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private var statusItem: NSStatusItem!
-    private var welcomePopover: NSPopover?
+    private var onboardingWindow: NSWindow?
     private var pickerWindow: NSWindow?
     private var helpWindow: NSWindow?
     #if DEBUG
@@ -36,11 +36,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
 
-        // 최초 실행 시 안내 팝오버
+        // 최초 실행 시 온보딩
         if !UserDefaults.standard.bool(forKey: "didShowWelcome") {
-            UserDefaults.standard.set(true, forKey: "didShowWelcome")
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.showWelcomePopover()
+                self.showOnboarding()
             }
         }
     }
@@ -81,33 +80,37 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu = menu
     }
 
-    // MARK: - 첫 실행 팝오버
+    // MARK: - 온보딩
 
-    private func showWelcomePopover() {
-        guard let button = statusItem.button else { return }
+    private func showOnboarding() {
+        let onboarding = OnboardingView(onComplete: { [weak self] in
+            UserDefaults.standard.set(true, forKey: "didShowWelcome")
+            self?.onboardingWindow?.close()
+            self?.onboardingWindow = nil
+        })
 
-        let popover = NSPopover()
-        popover.behavior = .transient
-        popover.contentViewController = NSHostingController(
-            rootView: VStack(spacing: 8) {
-                Image("MenuBarIcon")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 24, height: 24)
-                    .foregroundStyle(.secondary)
-                Text("Profile Router가\n메뉴바에서 실행 중입니다")
-                    .multilineTextAlignment(.center)
-                    .font(.callout)
-            }
-            .padding(16)
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 480, height: 380),
+            styleMask: [.titled, .closable],
+            backing: .buffered,
+            defer: false
         )
-        popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
-        welcomePopover = popover
+        window.title = "ProfilePrism 시작하기"
+        window.contentView = NSHostingView(rootView: onboarding)
+        window.center()
+        window.makeKeyAndOrderFront(nil)
+        NSApp.activate()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.welcomePopover?.close()
-            self?.welcomePopover = nil
+        NotificationCenter.default.addObserver(
+            forName: NSWindow.willCloseNotification,
+            object: window,
+            queue: .main
+        ) { [weak self] _ in
+            UserDefaults.standard.set(true, forKey: "didShowWelcome")
+            self?.onboardingWindow = nil
         }
+
+        onboardingWindow = window
     }
 
     // MARK: - 설정 열기
