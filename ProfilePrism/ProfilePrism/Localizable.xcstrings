@@ -71,7 +71,14 @@
       }
     },
     "About" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정보"
+          }
+        }
+      }
     },
     "Add Rule" : {
       "localizations" : {
@@ -127,7 +134,14 @@
       }
     },
     "Automatically routes URLs to the right\nChrome profile based on domain rules." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도메인 규칙에 따라 URL을 올바른\nChrome 프로필로 자동 라우팅합니다."
+          }
+        }
+      }
     },
     "Cancel" : {
       "localizations" : {
@@ -135,6 +149,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "취소"
+          }
+        }
+      }
+    },
+    "Export Failed" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내보내기 실패"
+          }
+        }
+      }
+    },
+    "Export Rules" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 내보내기"
+          }
+        }
+      }
+    },
+    "Export Rules…" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 내보내기…"
           }
         }
       }
@@ -421,6 +465,56 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "도움말"
+          }
+        }
+      }
+    },
+    "Import" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가져오기"
+          }
+        }
+      }
+    },
+    "Import Failed" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가져오기 실패"
+          }
+        }
+      }
+    },
+    "Import Rules" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 가져오기"
+          }
+        }
+      }
+    },
+    "Import Rules?" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙을 가져오시겠습니까?"
+          }
+        }
+      }
+    },
+    "Import Rules…" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙 가져오기…"
           }
         }
       }
@@ -798,10 +892,24 @@
       }
     },
     "Routing" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라우팅"
+          }
+        }
+      }
     },
     "Routing Rules" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라우팅 규칙"
+          }
+        }
+      }
     },
     "Rules" : {
       "extractionState" : "stale",
@@ -914,6 +1022,16 @@
         }
       }
     },
+    "The file could not be read. It may be corrupted or in an unsupported format." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파일을 읽을 수 없습니다. 파일이 손상되었거나 지원하지 않는 형식일 수 있습니다."
+          }
+        }
+      }
+    },
     "The Chrome extension intercepts links clicked within Chrome and forwards them to ProfilePrism via the profileprism:// scheme." : {
       "localizations" : {
         "ko" : {
@@ -1021,6 +1139,12 @@
             "state" : "new",
             "value" : "Version %1$@ (%2$@)"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버전 %1$@ (%2$@)"
+          }
         }
       }
     },
@@ -1070,6 +1194,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "와일드카드 매칭"
+          }
+        }
+      }
+    },
+    "Your existing %lld rules will be replaced with %lld imported rules. This cannot be undone." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Your existing %1$lld rules will be replaced with %2$lld imported rules. This cannot be undone."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기존 규칙 %1$lld개가 가져온 규칙 %2$lld개로 교체됩니다. 이 작업은 되돌릴 수 없습니다."
           }
         }
       }

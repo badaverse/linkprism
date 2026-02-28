@@ -34,6 +34,32 @@ final class ConfigManager: ObservableObject {
         }
     }
 
+    // MARK: - Export / Import
+
+    struct ExportBundle: Codable {
+        var version: Int = 1
+        var exportedAt: Date
+        var rules: [Rule]
+        var defaultProfile: String
+        var rememberedRoutes: [RememberedRoute]
+    }
+
+    func exportBundle() -> ExportBundle {
+        ExportBundle(
+            exportedAt: Date(),
+            rules: rules,
+            defaultProfile: defaultProfile,
+            rememberedRoutes: RememberedRouteManager.shared.entries
+        )
+    }
+
+    func applyImport(_ bundle: ExportBundle) {
+        rules = bundle.rules
+        defaultProfile = bundle.defaultProfile
+        save()
+        RememberedRouteManager.shared.replaceAll(with: bundle.rememberedRoutes)
+    }
+
     // MARK: - Stored shape
 
     private struct StoredConfig: Codable {

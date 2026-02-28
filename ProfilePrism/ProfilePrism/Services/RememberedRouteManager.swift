@@ -66,6 +66,11 @@ final class RememberedRouteManager: ObservableObject {
         save()
     }
 
+    func replaceAll(with newEntries: [RememberedRoute]) {
+        entries = newEntries
+        save()
+    }
+
     // MARK: - URL Normalization
 
     static func normalize(url: URL) -> String {

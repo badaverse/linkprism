@@ -58,10 +58,10 @@
         </dict>
         <dict>
             <key>CFBundleURLName</key>
-            <string>profilerouter</string>
+            <string>profileprism</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>profilerouter</string>
+                <string>profileprism</string>
             </array>
             <key>LSHandlerRank</key>
             <string>Owner</string>
@@ -93,6 +93,40 @@
             <array>
                 <string>public.xhtml</string>
             </array>
+        </dict>
+        <dict>
+            <key>CFBundleTypeName</key>
+            <string>ProfilePrism Rules</string>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>LSItemContentTypes</key>
+            <array>
+                <string>com.badaverse.profileprism.rules</string>
+            </array>
+            <key>LSHandlerRank</key>
+            <string>Owner</string>
+        </dict>
+    </array>
+
+    <!-- .profileprism 파일 타입 선언 -->
+    <key>UTExportedTypeDeclarations</key>
+    <array>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>com.badaverse.profileprism.rules</string>
+            <key>UTTypeDescription</key>
+            <string>ProfilePrism Rules</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.json</string>
+            </array>
+            <key>UTTypeTagSpecification</key>
+            <dict>
+                <key>public.filename-extension</key>
+                <array>
+                    <string>profileprism</string>
+                </array>
+            </dict>
         </dict>
     </array>
 </dict>

@@ -51,6 +51,7 @@ struct ProfilePrismApp: App {
 
         MenuBarExtra("ProfilePrism", image: "MenuBarIcon") {
             MenuBarContent()
+                .environmentObject(ConfigManager.shared)
         }
     }
 }
