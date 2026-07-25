@@ -47,6 +47,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         URLRouter.shared.routeURL(url)
     }
 
+    /// macOS delivers file:// opens (e.g. local .html files) as an 'odoc' Apple Event,
+    /// routed here rather than through handleURLEvent's 'GURL' handler, because
+    /// CFBundleDocumentTypes registers this app as a Viewer for public.html/public.xhtml.
+    /// Without this override, SwiftUI falls back to showing an arbitrary Window scene.
+    func application(_ application: NSApplication, open urls: [URL]) {
+        for url in urls {
+            URLRouter.shared.routeURL(url)
+        }
+    }
+
     // MARK: - Onboarding
 
     private func showOnboarding() {
