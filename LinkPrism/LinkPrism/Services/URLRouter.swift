@@ -32,6 +32,12 @@ final class URLRouter {
             targetURL = url
         }
 
+        // Only process http/https URLs through rules; open everything else (file://, etc.) directly
+        guard targetURL.scheme == "http" || targetURL.scheme == "https" else {
+            Router.openInChrome(url: targetURL, profile: nil)
+            return
+        }
+
         let config = ConfigManager.shared
         let result = Router.resolve(url: targetURL, rules: config.rules)
 
